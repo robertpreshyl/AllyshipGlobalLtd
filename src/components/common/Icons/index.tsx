@@ -11,6 +11,8 @@ import {
   Handshake,
   BarChart,
   User,
+  Image,
+  ChevronDown,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -29,4 +31,6 @@ export const Icons = {
   handshake: Handshake,
   chartBar: BarChart,
   user: User,
+  image: Image,
+  chevronDown: ChevronDown,
 } as const 
