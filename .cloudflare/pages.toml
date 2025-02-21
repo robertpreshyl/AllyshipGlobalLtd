@@ -1,5 +1,5 @@
 [build]
-command = "npm install && npm run build"
+command = "npm install && npm run clean && npm run build"
 publish = "out"
 node_version = "20"
 
@@ -10,4 +10,26 @@ NEXT_PUBLIC_BASE_PATH = ""
 NODE_ENV = "production"
 
 [functions]
-node_compat = true 
+node_compat = true
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[build.processing]
+skip_processing = false
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.css]
+bundle = true
+minify = true
+
+[build.processing.js]
+bundle = true
+minify = true
+
+[build.processing.images]
+compress = true 
