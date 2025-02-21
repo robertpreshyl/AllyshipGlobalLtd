@@ -1,0 +1,18 @@
+name = "allyship-global"
+type = "webpack"
+account_id = "" # Your Cloudflare account ID will go here
+workers_dev = true
+route = ""      # Your domain route will go here
+zone_id = ""    # Your zone ID will go here
+
+[site]
+bucket = "./out"
+entry-point = ".cloudflare/workers-site"
+
+[build]
+command = "npm run build"
+upload.format = "service-worker"
+
+[build.upload]
+dir = "out"
+format = "service-worker" 

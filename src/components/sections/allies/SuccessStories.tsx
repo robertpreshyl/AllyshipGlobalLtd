@@ -30,7 +30,7 @@ const successStories: SuccessStory[] = [
       { label: 'Countries', value: '15+', icon: 'mapPin' },
       { label: 'Time Saved', value: '60%', icon: 'chartBar' },
     ],
-    image: '/images/success/story-1.jpg',
+    image: '/images/success/real-estate-success.svg',
   },
   {
     id: '2',
@@ -43,7 +43,20 @@ const successStories: SuccessStory[] = [
       { label: 'CO2 Reduction', value: '500K tons', icon: 'zap' },
       { label: 'Jobs Created', value: '1000+', icon: 'chartBar' },
     ],
-    image: '/images/success/story-2.jpg',
+    image: '/images/success/energy-success.svg',
+  },
+  {
+    id: '3',
+    title: 'Tech Innovation Fund',
+    description: 'Strategic partnership with Tech Ventures Group for emerging technology investments.',
+    partner: 'Tech Ventures Group',
+    achievement: 'Launched a dedicated fund for AI and blockchain startups, achieving 300% ROI in 18 months.',
+    metrics: [
+      { label: 'Fund Size', value: '$500M', icon: 'building' },
+      { label: 'Portfolio', value: '25+', icon: 'cpu' },
+      { label: 'ROI', value: '300%', icon: 'chartBar' },
+    ],
+    image: '/images/success/tech-success.svg',
   },
 ]
 

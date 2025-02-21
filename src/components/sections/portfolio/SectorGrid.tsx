@@ -72,12 +72,14 @@ const projects: Project[] = [
 ]
 
 const sectors = [
-  { id: 'all', label: 'All Sectors' },
+  { id: 'all', label: 'All Sectors', icon: null },
   { id: 'real-estate', label: 'Real Estate', icon: 'building' },
   { id: 'energy', label: 'Energy', icon: 'zap' },
   { id: 'technology', label: 'Technology', icon: 'cpu' },
   { id: 'trade', label: 'Import/Export', icon: 'ship' },
 ] as const
+
+type SectorType = typeof sectors[number]
 
 export function SectorGrid() {
   const [selectedSector, setSelectedSector] = useState<string>('all')

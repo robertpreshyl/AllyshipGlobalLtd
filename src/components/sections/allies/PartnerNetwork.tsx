@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icons } from '@/components/common/Icons'
@@ -20,7 +21,7 @@ const partners: Partner[] = [
     type: 'investor',
     region: 'Europe',
     description: 'Leading venture capital firm specializing in emerging markets.',
-    logo: '/images/partners/partner-1.svg',
+    logo: '/images/partners/global-ventures.svg',
   },
   {
     id: '2',
@@ -28,7 +29,7 @@ const partners: Partner[] = [
     type: 'strategic',
     region: 'North America',
     description: 'Technology-focused strategic consulting and investment firm.',
-    logo: '/images/partners/partner-2.svg',
+    logo: '/images/partners/strategic-solutions.svg',
   },
   {
     id: '3',
@@ -36,7 +37,7 @@ const partners: Partner[] = [
     type: 'investor',
     region: 'Middle East',
     description: 'Regional investment powerhouse with focus on infrastructure.',
-    logo: '/images/partners/partner-3.svg',
+    logo: '/images/partners/mena-investments.svg',
   },
   {
     id: '4',
@@ -44,7 +45,7 @@ const partners: Partner[] = [
     type: 'operational',
     region: 'Asia',
     description: 'Operational excellence partner for Asian market expansion.',
-    logo: '/images/partners/partner-4.svg',
+    logo: '/images/partners/asia-pacific.svg',
   },
   {
     id: '5',
@@ -52,7 +53,7 @@ const partners: Partner[] = [
     type: 'strategic',
     region: 'Global',
     description: 'Global technology investment and development partner.',
-    logo: '/images/partners/partner-5.svg',
+    logo: '/images/partners/tech-ventures.svg',
   },
   {
     id: '6',
@@ -60,12 +61,12 @@ const partners: Partner[] = [
     type: 'operational',
     region: 'Europe',
     description: 'Sustainable development and green energy operations specialist.',
-    logo: '/images/partners/partner-6.svg',
+    logo: '/images/partners/sustainable-future.svg',
   },
 ]
 
 const partnerTypes = [
-  { id: 'all', label: 'All Partners' },
+  { id: 'all', label: 'All Partners', icon: null },
   { id: 'investor', label: 'Investment Partners', icon: 'building' },
   { id: 'strategic', label: 'Strategic Partners', icon: 'handshake' },
   { id: 'operational', label: 'Operational Partners', icon: 'chartBar' },
@@ -74,10 +75,30 @@ const partnerTypes = [
 export function PartnerNetwork() {
   const [selectedType, setSelectedType] = useState<string>('all')
   const [isMounted, setIsMounted] = useState(false)
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
+
+  const handleImageLoad = (partnerId: string) => {
+    setLoadedImages((prev) => ({ ...prev, [partnerId]: true }))
+  }
+
+  const handleImageError = (partnerId: string) => {
+    setLoadedImages((prev) => ({ ...prev, [partnerId]: false }))
+  }
+
+  const getPartnerTypeIcon = (type: Partner['type']) => {
+    switch (type) {
+      case 'investor':
+        return <Icons.building className="mr-1 h-4 w-4" />
+      case 'strategic':
+        return <Icons.handshake className="mr-1 h-4 w-4" />
+      case 'operational':
+        return <Icons.chartBar className="mr-1 h-4 w-4" />
+    }
+  }
 
   const filteredPartners = partners.filter(
     (partner) => selectedType === 'all' || partner.type === selectedType
@@ -126,9 +147,20 @@ export function PartnerNetwork() {
               {/* Partner Logo */}
               <div className="mb-6 flex h-16 items-center justify-center">
                 <div className="relative h-12 w-32">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Icons.building className="h-8 w-8 text-muted-foreground/20" />
-                  </div>
+                  {!loadedImages[partner.id] ? (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="h-8 w-8 animate-pulse rounded-full bg-muted" />
+                    </div>
+                  ) : null}
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className={`object-contain transition-opacity duration-300
+                      ${loadedImages[partner.id] ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => handleImageLoad(partner.id)}
+                    onError={() => handleImageError(partner.id)}
+                  />
                 </div>
               </div>
 
@@ -140,6 +172,10 @@ export function PartnerNetwork() {
                   <div className="flex items-center">
                     <Icons.mapPin className="mr-1 h-4 w-4" />
                     {partner.region}
+                  </div>
+                  <div className="flex items-center">
+                    {getPartnerTypeIcon(partner.type)}
+                    {partner.type.charAt(0).toUpperCase() + partner.type.slice(1)}
                   </div>
                 </div>
               </div>

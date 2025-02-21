@@ -6,11 +6,13 @@ import { useEffect, useRef, useState } from 'react'
 interface VideoBackgroundProps {
   src: string
   fallbackImage: string
+  onError?: () => void
 }
 
-export function VideoBackground({ src, fallbackImage }: VideoBackgroundProps) {
+export function VideoBackground({ src, fallbackImage, onError }: VideoBackgroundProps) {
   const [isClient, setIsClient] = useState(false)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -19,14 +21,22 @@ export function VideoBackground({ src, fallbackImage }: VideoBackgroundProps) {
 
   useEffect(() => {
     if (isClient && videoRef.current) {
-      videoRef.current.play().catch(() => {
-        console.warn('Video autoplay failed')
+      videoRef.current.play().catch((error) => {
+        console.warn('Video autoplay failed:', error)
+        setHasError(true)
+        onError?.()
       })
     }
-  }, [isClient])
+  }, [isClient, onError])
+
+  // Handle video loading errors
+  const handleVideoError = () => {
+    setHasError(true)
+    onError?.()
+  }
 
   // Server-side and initial client render
-  if (!isClient) {
+  if (!isClient || hasError) {
     return (
       <div className="absolute inset-0 h-full w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
@@ -55,6 +65,7 @@ export function VideoBackground({ src, fallbackImage }: VideoBackgroundProps) {
         muted
         playsInline
         onLoadedData={() => setIsVideoLoaded(true)}
+        onError={handleVideoError}
       >
         <source src={src} type="video/mp4" />
       </video>

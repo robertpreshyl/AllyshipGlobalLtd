@@ -1,0 +1,6 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#4CAF50" fillOpacity="0.1"/>
+  <path d="M380 250l20-100 20 100h-40z" stroke="#4CAF50" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+  <circle cx="400" cy="200" r="80" stroke="#4CAF50" strokeWidth="8" fill="none"/>
+  <text x="400" y="320" fill="#4CAF50" fontSize="24" textAnchor="middle" fontFamily="Space Grotesk">Sustainable Energy Success</text>
+</svg> 

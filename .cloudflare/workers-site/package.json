@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "allyship-global-workers",
+  "version": "1.0.0",
+  "description": "Allyship Global Ltd website worker",
+  "main": "index.js",
+  "author": "Allyship Global Ltd",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0"
+  }
+} 

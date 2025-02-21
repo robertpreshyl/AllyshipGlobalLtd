@@ -1,26 +1,30 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const VideoBackground = dynamic(() => import('@/components/common/VideoBackground').then(mod => mod.VideoBackground), {
-  ssr: false,
-})
+import { VideoBackground } from '@/components/common/VideoBackground'
 
 export function HeroSection() {
   const [isMounted, setIsMounted] = useState(false)
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
+    return () => setIsMounted(false)
   }, [])
 
   return (
     <section className="relative h-screen w-full">
-      {isMounted && <VideoBackground
-        src="/videos/hero-background.mp4"
-        fallbackImage="/images/hero-fallback.svg"
-      />}
+      {isMounted && !hasError && (
+        <VideoBackground
+          src="/videos/hero-background.mp4"
+          fallbackImage="/images/hero-fallback.svg"
+          onError={() => setHasError(true)}
+        />
+      )}
+      {(hasError || !isMounted) && (
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-950" />
+      )}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container text-center text-white">
           <AnimatePresence mode="wait">
