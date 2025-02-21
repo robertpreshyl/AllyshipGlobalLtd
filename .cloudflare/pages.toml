@@ -1,7 +1,6 @@
 [build]
-command = "npm install && npm run clean && npm run build"
-publish = "out"
-node_version = "20"
+command = "npx @cloudflare/next-on-pages@1"
+publish = ".vercel/output/static"
 
 [build.environment]
 NODE_VERSION = "20"
