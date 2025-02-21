@@ -1,11 +1,13 @@
 [build]
-command = "npm run build"
+command = "npm install && npm run build"
 publish = "out"
 node_version = "20"
 
 [build.environment]
 NODE_VERSION = "20"
 NPM_VERSION = "10"
+NEXT_PUBLIC_BASE_PATH = ""
+NODE_ENV = "production"
 
 [functions]
 node_compat = true 

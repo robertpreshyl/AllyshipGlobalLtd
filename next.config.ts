@@ -10,6 +10,9 @@ const nextConfig = {
       },
     ],
   },
+  trailingSlash: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+  reactStrictMode: true,
 }
 
 export default nextConfig
