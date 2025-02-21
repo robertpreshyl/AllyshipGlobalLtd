@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" fill="#4CAF50" fillOpacity="0.1"/>
+  <path d="M60 100h80M70 80l-10 20 10 20M130 80l10 20-10 20" stroke="#4CAF50" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+  <circle cx="100" cy="100" r="40" stroke="#4CAF50" strokeWidth="8" fill="none"/>
+  <text x="100" y="180" fill="#4CAF50" fontSize="24" textAnchor="middle" fontFamily="Space Grotesk">SS</text>
+</svg> 

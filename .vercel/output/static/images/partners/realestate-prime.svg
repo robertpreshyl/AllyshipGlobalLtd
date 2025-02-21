@@ -1,0 +1,5 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" fill="#FFD700" fillOpacity="0.1"/>
+  <path d="M60 140V80l40-20 40 20v60H60z" stroke="#FFD700" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M90 140v-40h20v40" stroke="#FFD700" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+</svg> 
