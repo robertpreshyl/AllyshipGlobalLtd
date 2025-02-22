@@ -1,5 +1,5 @@
 {
-  "timestamp": 1740230612019,
+  "timestamp": 1740232357104,
   "outputDir": ".vercel/output/static/_worker.js",
   "versions": {
     "@cloudflare/next-on-pages": "1.13.8"
@@ -15,8 +15,8 @@
     "staticAssets": [
       "/404/index.html",
       "/404.html",
-      "/_next/static/4S9aion1xnHltOSaCb2VQ/_buildManifest.js",
-      "/_next/static/4S9aion1xnHltOSaCb2VQ/_ssgManifest.js",
+      "/_next/static/WKKC8mgIg3z83Vw4OBv9d/_buildManifest.js",
+      "/_next/static/WKKC8mgIg3z83Vw4OBv9d/_ssgManifest.js",
       "/_next/static/chunks/173-ef8b4a9c06a99680.js",
       "/_next/static/chunks/478-11d7ca9f78fd9d9d.js",
       "/_next/static/chunks/4bd1b696-927b5d87d2664d33.js",

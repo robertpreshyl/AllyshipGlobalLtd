@@ -1,10 +1,23 @@
-name = "allyship-global"
-compatibility_date = "2024-01-01"
+name = "allyshipglobal"
+compatibility_date = "2024-03-01"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "allyshipglobal"
+database_id = "your-database-id"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "your-kv-namespace-id"
+
+[[custom_domains]]
+domain = "allyshipglobal.com"
+zone_id = "your-zone-id"
 
 [build]
 command = "npm run pages:build"
-pages_build_output_dir = ".vercel/output/static"
 
 [site]
 bucket = ".vercel/output/static"

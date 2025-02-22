@@ -235,4 +235,18 @@ import Image from 'next/image'
 ### Contact Information
 - Content Manager: content@allyshipglobal.com
 - Technical Support: support@allyshipglobal.com
-- Legal Team: legal@allyshipglobal.com 
+- Legal Team: legal@allyshipglobal.com
+
+Allyship Global Ltd - Uniting Global Allies for Strategic Investments
+
+A modern corporate platform facilitating cross-border investment partnerships across real estate, technology, energy, and global trade sectors. Built with Next.js, TypeScript, and Tailwind CSS, deployed globally via Cloudflare Pages.
+
+Key Features:
+• Cross-border investment opportunities
+• Interactive investment insights
+• Global partner network
+• Real-time market analysis
+• Secure transaction platform
+
+Tech Stack: Next.js, TypeScript, Tailwind CSS, Framer Motion
+Deployment: Cloudflare Pages 
