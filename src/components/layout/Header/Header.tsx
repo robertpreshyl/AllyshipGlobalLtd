@@ -56,6 +56,10 @@ export function Header() {
     }
   }, [isOpen])
 
+  // Don't render anything during SSR
+  if (typeof window === 'undefined') return null
+
+  // Don't render until mounted on client
   if (!mounted) return null
 
   return (
@@ -128,6 +132,15 @@ export function Header() {
               transition={{ duration: 0.2 }}
               className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden"
               onClick={() => setIsOpen(false)}
+              style={{
+                position: 'fixed',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                height: '100%'
+              }}
             />
             
             {/* Menu */}
@@ -137,6 +150,12 @@ export function Header() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className="absolute left-0 right-0 top-[64px] border-t bg-white shadow-lg md:hidden"
+              style={{
+                position: 'absolute',
+                top: '64px',
+                left: 0,
+                right: 0
+              }}
             >
               <nav className="container divide-y divide-gray-100">
                 <div className="py-2">
