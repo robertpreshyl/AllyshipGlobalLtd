@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { navigationConfig } from '@/lib/constants/config'
 import { cn } from '@/lib/helpers/utils'
 import { Icons } from '@/components/common/Icons'
 

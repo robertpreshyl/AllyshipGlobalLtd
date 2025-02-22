@@ -67,6 +67,9 @@ export function PartnershipForm() {
       return
     }
 
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
     try {
       // Simulated API call
       await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -86,6 +89,8 @@ export function PartnershipForm() {
     } catch {
       // Show error message
       setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
