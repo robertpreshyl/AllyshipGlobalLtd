@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Allyship Global Ltd
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.1.7-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Private-red)]()
 
-First, run the development server:
+A modern, responsive corporate website for Allyship Global Ltd, showcasing global investment opportunities and strategic partnerships across multiple sectors.
 
+## 🌟 Features
+
+- **Modern Design**: Responsive, mobile-first design using Tailwind CSS
+- **Dynamic Content**: Interactive blog posts and investment insights
+- **Performance Optimized**: Built with Next.js for optimal loading speeds
+- **Global Presence**: Multi-region support with Cloudflare Pages deployment
+- **Sector Coverage**: Comprehensive information on:
+  - Real Estate Investments
+  - Technology Ventures
+  - Energy & Sustainability
+  - Cross-border Trade
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 20.x or later
+- npm 10.x or later
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/robertpreshyl/AllyshipGlobalLtd.git
+cd AllyshipGlobalLtd
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Visit `http://localhost:3000` to view the website.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Build & Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Local Build
+```bash
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Cloudflare Pages Deployment
+```bash
+npm run pages:build
+npm run pages:deploy
+```
 
-## Deploy on Vercel
+## 🧪 Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the test suite:
+```bash
+npm run test
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Documentation
+
+Detailed documentation is available in the [/docs](/docs) directory:
+
+- [Architecture Overview](/docs/ARCHITECTURE.md)
+- [Development Guide](/docs/DEVELOPMENT.md)
+- [Deployment Guide](/docs/DEPLOYMENT.md)
+- [Content Management](/docs/CONTENT.md)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.1.7
+- **Language**: TypeScript 5.x
+- **Styling**: Tailwind CSS 3.4.1
+- **Animation**: Framer Motion
+- **Deployment**: Cloudflare Pages
+- **Icons**: Lucide React
+- **Development**:
+  - ESLint
+  - Prettier
+  - TypeScript ESLint
+
+## 📝 Project Structure
+
+```
+AllyshipGlobalLtd/
+├── src/
+│   ├── app/           # Next.js app directory
+│   ├── components/    # React components
+│   ├── lib/          # Utility functions
+│   └── styles/       # Global styles
+├── public/           # Static assets
+├── docs/            # Documentation
+└── .cloudflare/     # Cloudflare configuration
+```
+
+## 🤝 Contributing
+
+1. Create a feature branch from `develop`
+2. Make your changes
+3. Submit a pull request
+
+## 📄 License
+
+Private - All rights reserved
+
+## 🌐 Links
+
+- [Production Website](https://allyshipglobal.com)
+- [Development Documentation](/docs)
+- [Content Guidelines](/docs/CONTENT.md)
