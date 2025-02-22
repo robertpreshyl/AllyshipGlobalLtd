@@ -64,7 +64,7 @@
       "handle": "hit"
     },
     {
-      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|uFyckw8DVJKRoDHtz_05M)/.+",
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|\\-zl\\-dP3WcDDKIx8ggj7pn)/.+",
       "headers": {
         "cache-control": "public,max-age=31536000,immutable"
       },
@@ -133,8 +133,24 @@
       "path": "insights/posts/tech-investment-trends/index",
       "contentType": "text/html; charset=utf-8"
     },
+    "portfolio/energy/index.html": {
+      "path": "portfolio/energy/index",
+      "contentType": "text/html; charset=utf-8"
+    },
     "portfolio/index.html": {
       "path": "portfolio/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "portfolio/real-estate/index.html": {
+      "path": "portfolio/real-estate/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "portfolio/technology/index.html": {
+      "path": "portfolio/technology/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "portfolio/trade/index.html": {
+      "path": "portfolio/trade/index",
       "contentType": "text/html; charset=utf-8"
     },
     "privacy/index.html": {
