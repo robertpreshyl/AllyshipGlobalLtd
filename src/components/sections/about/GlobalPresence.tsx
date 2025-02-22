@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Icons } from '@/components/common/Icons'
 
 interface Office {
   city: string
@@ -60,6 +61,9 @@ export function GlobalPresence() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
+              <div className="mb-4">
+                <Icons.mapPin className="mx-auto h-8 w-8 text-primary" />
+              </div>
               <div className="mb-2 text-xl font-bold text-primary">{office.city}</div>
               <div className="text-sm text-muted-foreground">{office.country}</div>
               <div className="text-xs text-muted-foreground">{office.region}</div>

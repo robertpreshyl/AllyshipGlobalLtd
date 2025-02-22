@@ -27,6 +27,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.8",
     "@eslint/eslintrc": "^3",
+    "@types/google.maps": "^3.58.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

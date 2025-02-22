@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { navigationConfig, siteConfig } from '@/lib/constants/config'
 import { Icons } from '@/components/common/Icons'
