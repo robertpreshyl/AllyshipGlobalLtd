@@ -1,6 +1,0 @@
-<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" fill="#1A237E" fillOpacity="0.1"/>
-  <path d="M350 150l50-40 50 40v100H350V150z" stroke="#1A237E" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-  <path d="M380 250v-40h40v40" stroke="#1A237E" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-  <text x="400" y="320" fill="#1A237E" fontSize="24" textAnchor="middle" fontFamily="Space Grotesk">Real Estate Investment Success</text>
-</svg> 

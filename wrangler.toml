@@ -3,4 +3,8 @@ compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 [site]
-bucket = ".vercel/output/static" 
+bucket = ".vercel/output/static"
+
+[build]
+command = "npm run pages:build"
+pages_build_output_dir = ".vercel/output/static" 
