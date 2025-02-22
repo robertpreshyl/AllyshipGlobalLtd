@@ -1,0 +1,6 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFD700" fillOpacity="0.1"/>
+  <path d="M320 250l80-100 80 100M400 150v100" stroke="#FFD700" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+  <circle cx="400" cy="200" r="80" stroke="#FFD700" strokeWidth="8" fill="none"/>
+  <text x="400" y="320" fill="#FFD700" fontSize="24" textAnchor="middle" fontFamily="Space Grotesk">Tech Innovation Success</text>
+</svg> 

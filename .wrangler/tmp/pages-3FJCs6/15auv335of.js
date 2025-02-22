@@ -2,9 +2,9 @@
 var define_ROUTES_default = { version: 1, description: "Built with @cloudflare/next-on-pages@1.13.8.", include: ["/*"], exclude: ["/_next/static/*"] };
 
 // node_modules/wrangler/templates/pages-dev-pipeline.ts
-import worker from "/Users/allyshipgloballtd/Documents/cursorfiles/AllyshipGlobalLtd-1/.wrangler/tmp/pages-3FJCs6/bundledWorker-0.6502410661987601.mjs";
+import worker from "/Users/allyshipgloballtd/Documents/cursorfiles/AllyshipGlobalLtd-1/.wrangler/tmp/pages-3FJCs6/bundledWorker-0.8330414394578152.mjs";
 import { isRoutingRuleMatch } from "/Users/allyshipgloballtd/Documents/cursorfiles/AllyshipGlobalLtd-1/node_modules/wrangler/templates/pages-dev-util.ts";
-export * from "/Users/allyshipgloballtd/Documents/cursorfiles/AllyshipGlobalLtd-1/.wrangler/tmp/pages-3FJCs6/bundledWorker-0.6502410661987601.mjs";
+export * from "/Users/allyshipgloballtd/Documents/cursorfiles/AllyshipGlobalLtd-1/.wrangler/tmp/pages-3FJCs6/bundledWorker-0.8330414394578152.mjs";
 var routes = define_ROUTES_default;
 var pages_dev_pipeline_default = {
   fetch(request, env, context) {

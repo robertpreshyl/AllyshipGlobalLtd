@@ -1,5 +1,5 @@
 [build]
-command = "npx @cloudflare/next-on-pages@1"
+command = "npm run pages:build"
 publish = ".vercel/output/static"
 
 [build.environment]
@@ -33,4 +33,10 @@ bundle = true
 minify = true
 
 [build.processing.images]
-compress = true 
+compress = true
+
+[compatibility]
+nodejs_compat = true
+
+[site]
+bucket = ".vercel/output/static" 

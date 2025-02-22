@@ -18,5 +18,8 @@
         "framework": "nextjs"
       }
     }
-  ]
+  ],
+  "features": {
+    "webAnalyticsVersion": "1.5.0"
+  }
 }
