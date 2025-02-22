@@ -5,22 +5,25 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/helpers/utils'
 import { Icons } from '@/components/common/Icons'
+import { LanguageSwitcher } from '@/components/common/LanguageSwitcher'
+import { useTranslation } from '@/lib/i18n/useTranslation'
 
 interface NavItem {
-  title: string
+  titleKey: ['nav', 'home' | 'about' | 'portfolio' | 'allies' | 'contact']
   href: string
   icon?: keyof typeof Icons
 }
 
 const navItems: NavItem[] = [
-  { title: 'Home', href: '/', icon: 'home' },
-  { title: 'About', href: '/about', icon: 'users' },
-  { title: 'Portfolio', href: '/portfolio', icon: 'briefcase' },
-  { title: 'Allies', href: '/allies', icon: 'handshake' },
-  { title: 'Contact', href: '/contact', icon: 'mail' },
+  { titleKey: ['nav', 'home'], href: '/', icon: 'home' },
+  { titleKey: ['nav', 'about'], href: '/about', icon: 'users' },
+  { titleKey: ['nav', 'portfolio'], href: '/portfolio', icon: 'briefcase' },
+  { titleKey: ['nav', 'allies'], href: '/allies', icon: 'handshake' },
+  { titleKey: ['nav', 'contact'], href: '/contact', icon: 'mail' },
 ]
 
 export function Header() {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
@@ -81,19 +84,20 @@ export function Header() {
                   item.href === '/' ? 'text-primary' : 'text-gray-600'
                 )}
               >
-                {item.title}
+                {t(item.titleKey)}
               </Link>
             ))}
           </nav>
         </div>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA and Language Switcher */}
         <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher />
           <Link
             href="/contact"
             className="rounded-full bg-primary px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90"
           >
-            Get Started
+            {t(['common', 'getStarted'])}
           </Link>
         </div>
 
@@ -104,7 +108,7 @@ export function Header() {
             setIsOpen(!isOpen)
           }}
           className="flex items-center justify-center rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 md:hidden"
-          aria-label="Toggle menu"
+          aria-label={isOpen ? t(['common', 'close']) : t(['common', 'menu'])}
           aria-expanded={isOpen}
         >
           <motion.div
@@ -159,6 +163,10 @@ export function Header() {
             >
               <nav className="container divide-y divide-gray-100">
                 <div className="py-2">
+                  {/* Language Switcher in Mobile Menu */}
+                  <div className="px-4 py-2">
+                    <LanguageSwitcher />
+                  </div>
                   {navItems.map((item, index) => {
                     const Icon = item.icon ? Icons[item.icon] : null
                     return (
@@ -178,7 +186,7 @@ export function Header() {
                           )}
                         >
                           {Icon && <Icon className="h-5 w-5" />}
-                          <span>{item.title}</span>
+                          <span>{t(item.titleKey)}</span>
                         </Link>
                       </motion.div>
                     )
@@ -191,7 +199,7 @@ export function Header() {
                     className="flex items-center justify-center space-x-2 rounded-full bg-primary px-6 py-3 text-base font-medium text-white transition-all hover:bg-primary/90 active:scale-95"
                   >
                     <Icons.arrowRight className="h-5 w-5" />
-                    <span>Get Started</span>
+                    <span>{t(['common', 'getStarted'])}</span>
                   </Link>
                 </div>
               </nav>
