@@ -1,6 +1,8 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import { fileURLToPath } from "url"
 import path from "path"
+import typescriptPlugin from "@typescript-eslint/eslint-plugin"
+import typescriptParser from "@typescript-eslint/parser"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -15,8 +17,18 @@ export default [
   },
   ...compat.extends("next/core-web-vitals"),
   {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    plugins: {
+      typescript: typescriptPlugin,
+    },
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",
+      "typescript/no-unused-vars": "warn",
       "react/no-unescaped-entities": "off",
     },
   },

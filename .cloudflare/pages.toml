@@ -6,6 +6,7 @@ publish = ".vercel/output/static"
 NODE_VERSION = "20"
 NPM_VERSION = "10"
 NEXT_PUBLIC_BASE_PATH = ""
+NEXT_PUBLIC_SITE_URL = "https://allyshipglobal.com"
 NODE_ENV = "production"
 NODE_COMPAT = "true"
 
@@ -39,4 +40,8 @@ compress = true
 nodejs_compat = true
 
 [site]
-bucket = ".vercel/output/static" 
+bucket = ".vercel/output/static"
+
+[site.domains]
+main = "allyshipglobal.com"
+www = "www.allyshipglobal.com" 

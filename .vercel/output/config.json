@@ -64,7 +64,7 @@
       "handle": "hit"
     },
     {
-      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|ZJXyE02R_ZG9d\\-Ngc_SOA)/.+",
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|4S9aion1xnHltOSaCb2VQ)/.+",
       "headers": {
         "cache-control": "public,max-age=31536000,immutable"
       },
@@ -97,8 +97,40 @@
       "path": "allies/index",
       "contentType": "text/html; charset=utf-8"
     },
+    "contact/index.html": {
+      "path": "contact/index",
+      "contentType": "text/html; charset=utf-8"
+    },
     "index.html": {
       "path": "index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/index.html": {
+      "path": "insights/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/cross-border-investment-guide/index.html": {
+      "path": "insights/posts/cross-border-investment-guide/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/crypto-market-analysis/index.html": {
+      "path": "insights/posts/crypto-market-analysis/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/oil-gas-sector-outlook/index.html": {
+      "path": "insights/posts/oil-gas-sector-outlook/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/real-estate-opportunities-2024/index.html": {
+      "path": "insights/posts/real-estate-opportunities-2024/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/sustainable-energy-investments/index.html": {
+      "path": "insights/posts/sustainable-energy-investments/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "insights/posts/tech-investment-trends/index.html": {
+      "path": "insights/posts/tech-investment-trends/index",
       "contentType": "text/html; charset=utf-8"
     },
     "portfolio/index.html": {

@@ -27,7 +27,7 @@ import {
   Map,
 } from 'lucide-react'
 
-type IconsType = {
+interface IconsType {
   [key: string]: LucideIcon
 }
 

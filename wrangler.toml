@@ -12,6 +12,7 @@ bucket = ".vercel/output/static"
 [build.environment]
 NODE_VERSION = "20"
 NPM_VERSION = "10"
+NEXT_PUBLIC_SITE_URL = "https://allyshipglobal.com"
 
 # Enable Node.js compatibility
 node_compat = true
@@ -23,4 +24,13 @@ include = ["**/*"]
 exclude = []
 
 [env.production]
-node_compat = true 
+node_compat = true
+
+# Custom domains configuration
+[[routes]]
+pattern = "allyshipglobal.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.allyshipglobal.com"
+custom_domain = true 
