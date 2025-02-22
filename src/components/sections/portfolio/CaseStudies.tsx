@@ -29,7 +29,7 @@ const caseStudies: CaseStudy[] = [
       { label: 'Energy Efficiency', value: '60%' },
       { label: 'New Residences', value: '2,500+' },
     ],
-    image: '/images/portfolio/case-1.jpg',
+    image: '/images/portfolio/case-1.svg',
   },
   {
     id: '2',
@@ -42,7 +42,7 @@ const caseStudies: CaseStudy[] = [
       { label: 'Energy Output', value: '1.2 GW' },
       { label: 'Jobs Created', value: '1,000+' },
     ],
-    image: '/images/portfolio/case-2.jpg',
+    image: '/images/portfolio/case-2.svg',
   },
   {
     id: '3',
@@ -55,7 +55,7 @@ const caseStudies: CaseStudy[] = [
       { label: 'Cost Savings', value: '45%' },
       { label: 'Transactions', value: '100K+' },
     ],
-    image: '/images/portfolio/case-3.jpg',
+    image: '/images/portfolio/case-3.svg',
   },
 ]
 

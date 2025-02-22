@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Icons } from '@/components/common/Icons'
+import { AnimatedTooltip } from '@/components/ui/animated-tooltip'
 
 // This will be replaced with actual data from the CMS
 const blogPosts = [
@@ -14,8 +15,10 @@ const blogPosts = [
     readTime: '6 min read',
     publishDate: 'March 10, 2024',
     author: {
+      id: 2,
       name: 'Sarah Chen',
-      role: 'Real Estate Director',
+      designation: 'Real Estate Director',
+      image: '/images/team/sarah-chen.svg',
     },
   },
   {
@@ -26,8 +29,10 @@ const blogPosts = [
     readTime: '5 min read',
     publishDate: 'March 8, 2024',
     author: {
+      id: 3,
       name: 'Michael Green',
-      role: 'Energy Sector Lead',
+      designation: 'Energy Sector Lead',
+      image: '/images/team/michael-patel.svg',
     },
   },
   {
@@ -38,8 +43,10 @@ const blogPosts = [
     readTime: '7 min read',
     publishDate: 'March 5, 2024',
     author: {
+      id: 4,
       name: 'Alex Wong',
-      role: 'Digital Assets Analyst',
+      designation: 'Digital Assets Analyst',
+      image: '/images/team/emma-mueller.svg',
     },
   },
   {
@@ -50,8 +57,10 @@ const blogPosts = [
     readTime: '10 min read',
     publishDate: 'March 1, 2024',
     author: {
-      name: 'David Miller',
-      role: 'Global Strategy Director',
+      id: 1,
+      name: 'Robert Smith',
+      designation: 'Chief Executive Officer',
+      image: '/images/team/robert-smith.svg',
     },
   },
   {
@@ -62,8 +71,10 @@ const blogPosts = [
     readTime: '8 min read',
     publishDate: 'February 28, 2024',
     author: {
-      name: 'James Wilson',
-      role: 'Energy Markets Analyst',
+      id: 3,
+      name: 'Michael Patel',
+      designation: 'Energy Markets Analyst',
+      image: '/images/team/michael-patel.svg',
     },
   },
   {
@@ -74,8 +85,10 @@ const blogPosts = [
     readTime: '6 min read',
     publishDate: 'February 25, 2024',
     author: {
-      name: 'Lisa Zhang',
-      role: 'Technology Investment Lead',
+      id: 2,
+      name: 'Sarah Chen',
+      designation: 'Technology Investment Lead',
+      image: '/images/team/sarah-chen.svg',
     },
   },
 ]
@@ -110,18 +123,7 @@ export function BlogGrid() {
             </p>
 
             <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="relative h-8 w-8 overflow-hidden rounded-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
-                  <div className="flex h-full items-center justify-center">
-                    <Icons.user className="h-5 w-5 text-muted-foreground/20" />
-                  </div>
-                </div>
-                <div>
-                  <p className="text-sm font-medium">{post.author.name}</p>
-                  <p className="text-xs text-muted-foreground">{post.author.role}</p>
-                </div>
-              </div>
+              <AnimatedTooltip items={[post.author]} />
               <div className="flex items-center space-x-1 text-xs text-muted-foreground">
                 <Icons.clock className="h-4 w-4" />
                 <span>{post.readTime}</span>
