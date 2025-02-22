@@ -7,7 +7,7 @@ import { Icons } from '@/components/common/Icons'
 // This will be replaced with actual data from the CMS
 const blogPosts = [
   {
-    slug: 'real-estate-opportunities-2024',
+    slug: 'posts/real-estate-opportunities-2024',
     title: 'Emerging Real Estate Opportunities in Global Markets',
     excerpt: 'Discover promising real estate investment opportunities across key global markets.',
     category: 'Market Analysis',
@@ -19,7 +19,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'sustainable-energy-investments',
+    slug: 'posts/sustainable-energy-investments',
     title: 'The Rise of Sustainable Energy Investments',
     excerpt: 'How green energy is reshaping the global investment landscape.',
     category: 'Industry Insights',
@@ -31,7 +31,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'crypto-market-analysis',
+    slug: 'posts/crypto-market-analysis',
     title: 'Cryptocurrency Market: A Strategic Analysis',
     excerpt: 'Understanding the evolving cryptocurrency market and investment opportunities.',
     category: 'Investment Strategy',
