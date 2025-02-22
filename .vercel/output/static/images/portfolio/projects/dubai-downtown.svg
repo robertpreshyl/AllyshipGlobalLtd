@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F5F5F5"/>
+  <!-- Modern building silhouette -->
+  <path d="M200 550 L200 200 L400 100 L600 200 L600 550 Z" stroke="#1A237E" stroke-width="4" fill="#E3F2FD"/>
+  <path d="M300 550 L300 300 L400 250 L500 300 L500 550" stroke="#1A237E" stroke-width="2" fill="none"/>
+  <!-- Windows -->
+  <rect x="250" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+  <rect x="350" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+  <rect x="450" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+  <rect x="250" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+  <rect x="350" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+  <rect x="450" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+</svg> 
