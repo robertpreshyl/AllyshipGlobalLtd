@@ -64,7 +64,7 @@
       "handle": "hit"
     },
     {
-      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|WKKC8mgIg3z83Vw4OBv9d)/.+",
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|bl1c9B3YLQaEiLAg__Bjh)/.+",
       "headers": {
         "cache-control": "public,max-age=31536000,immutable"
       },
@@ -135,6 +135,14 @@
     },
     "portfolio/index.html": {
       "path": "portfolio/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "privacy/index.html": {
+      "path": "privacy/index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "terms/index.html": {
+      "path": "terms/index",
       "contentType": "text/html; charset=utf-8"
     }
   },

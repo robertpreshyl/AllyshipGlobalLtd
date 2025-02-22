@@ -1,7 +1,14 @@
 name = "allyshipglobal"
 compatibility_date = "2024-03-01"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+
+[build]
+command = "npm run pages:build"
+output_dir = ".vercel/output/static"
+
+[env.production]
+NODE_VERSION = "20"
+NPM_VERSION = "10"
 
 [[d1_databases]]
 binding = "DB"
@@ -12,20 +19,12 @@ database_id = "your-database-id"
 binding = "CACHE"
 id = "your-kv-namespace-id"
 
-[[custom_domains]]
-domain = "allyshipglobal.com"
-zone_id = "your-zone-id"
-
-[build]
-command = "npm run pages:build"
-
 [site]
 bucket = ".vercel/output/static"
 
-[build.environment]
-NODE_VERSION = "20"
-NPM_VERSION = "10"
-NEXT_PUBLIC_SITE_URL = "https://allyshipglobal.com"
+[site.domains]
+main = "allyshipglobal.com"
+www = "www.allyshipglobal.com"
 
 # Enable Node.js compatibility
 node_compat = true
@@ -35,9 +34,6 @@ type = "sites"
 dir = ".vercel/output/static"
 include = ["**/*"]
 exclude = []
-
-[env.production]
-node_compat = true
 
 # Custom domains configuration
 [[routes]]

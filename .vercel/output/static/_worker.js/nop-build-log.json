@@ -1,5 +1,5 @@
 {
-  "timestamp": 1740232357104,
+  "timestamp": 1740236159617,
   "outputDir": ".vercel/output/static/_worker.js",
   "versions": {
     "@cloudflare/next-on-pages": "1.13.8"
@@ -15,15 +15,15 @@
     "staticAssets": [
       "/404/index.html",
       "/404.html",
-      "/_next/static/WKKC8mgIg3z83Vw4OBv9d/_buildManifest.js",
-      "/_next/static/WKKC8mgIg3z83Vw4OBv9d/_ssgManifest.js",
+      "/_next/static/bl1c9B3YLQaEiLAg__Bjh/_buildManifest.js",
+      "/_next/static/bl1c9B3YLQaEiLAg__Bjh/_ssgManifest.js",
       "/_next/static/chunks/173-ef8b4a9c06a99680.js",
       "/_next/static/chunks/478-11d7ca9f78fd9d9d.js",
       "/_next/static/chunks/4bd1b696-927b5d87d2664d33.js",
       "/_next/static/chunks/517-c3c09e21b5760218.js",
       "/_next/static/chunks/87-2e2f9ab80ba978c5.js",
       "/_next/static/chunks/981-905063974f0021ad.js",
-      "/_next/static/chunks/app/_not-found/page-d0fbfad21229a527.js",
+      "/_next/static/chunks/app/_not-found/page-cb72c0031e5124ed.js",
       "/_next/static/chunks/app/about/page-516d0474b63b129e.js",
       "/_next/static/chunks/app/allies/page-797fcc948049dfba.js",
       "/_next/static/chunks/app/contact/page-fbbd34884f2a5ae0.js",
@@ -38,6 +38,8 @@
       "/_next/static/chunks/app/not-found-473cd4b57fa24a24.js",
       "/_next/static/chunks/app/page-60d4eb53f85ac93e.js",
       "/_next/static/chunks/app/portfolio/page-f4e85a055bf57b14.js",
+      "/_next/static/chunks/app/privacy/page-dd9f327f173621df.js",
+      "/_next/static/chunks/app/terms/page-723f3ac6c7ad08da.js",
       "/_next/static/chunks/framework-6b27c2b7aa38af2d.js",
       "/_next/static/chunks/main-2b3ec5760f2b8278.js",
       "/_next/static/chunks/main-app-9573d0cebb762c0d.js",
@@ -108,6 +110,10 @@
       "/next.svg",
       "/portfolio/index.html",
       "/portfolio/index.txt",
+      "/privacy/index.html",
+      "/privacy/index.txt",
+      "/terms/index.html",
+      "/terms/index.txt",
       "/vercel.svg",
       "/videos/hero-background.mp4",
       "/window.svg"

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icons } from '@/components/common/Icons'
+import Image from 'next/image'
 
 interface Project {
   id: string
@@ -22,7 +23,7 @@ const projects: Project[] = [
     sector: 'real-estate',
     location: 'London, UK',
     value: '$150M',
-    image: '/images/portfolio/real-estate-1.jpg',
+    image: '/images/portfolio/real-estate-1.svg',
   },
   {
     id: '2',
@@ -31,7 +32,7 @@ const projects: Project[] = [
     sector: 'energy',
     location: 'Dubai, UAE',
     value: '$200M',
-    image: '/images/portfolio/energy-1.jpg',
+    image: '/images/portfolio/energy-1.svg',
   },
   {
     id: '3',
@@ -40,7 +41,7 @@ const projects: Project[] = [
     sector: 'technology',
     location: 'Singapore',
     value: '$75M',
-    image: '/images/portfolio/tech-1.jpg',
+    image: '/images/portfolio/tech-1.svg',
   },
   {
     id: '4',
@@ -49,7 +50,7 @@ const projects: Project[] = [
     sector: 'trade',
     location: 'Rotterdam, Netherlands',
     value: '$300M',
-    image: '/images/portfolio/trade-1.jpg',
+    image: '/images/portfolio/trade-1.svg',
   },
   {
     id: '5',
@@ -58,7 +59,7 @@ const projects: Project[] = [
     sector: 'real-estate',
     location: 'New York, USA',
     value: '$250M',
-    image: '/images/portfolio/real-estate-2.jpg',
+    image: '/images/portfolio/real-estate-1.svg',
   },
   {
     id: '6',
@@ -67,7 +68,7 @@ const projects: Project[] = [
     sector: 'energy',
     location: 'Copenhagen, Denmark',
     value: '$400M',
-    image: '/images/portfolio/energy-2.jpg',
+    image: '/images/portfolio/energy-1.svg',
   },
 ]
 
@@ -135,12 +136,14 @@ export function SectorGrid() {
             >
               {/* Project Image */}
               <div className="aspect-video overflow-hidden">
-                <div className="relative h-full w-full bg-muted">
-                  {/* Placeholder gradient while image loads */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
-                  <div className="flex h-full items-center justify-center">
-                    <Icons.image className="h-12 w-12 text-muted-foreground/20" />
-                  </div>
+                <div className="relative h-full w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
               </div>
 
