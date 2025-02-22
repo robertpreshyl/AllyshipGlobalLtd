@@ -26,6 +26,8 @@ import {
   GraduationCap,
   Map,
   ArrowRight,
+  Menu,
+  X,
 } from 'lucide-react'
 
 interface IconsType {
@@ -57,4 +59,6 @@ export const Icons: IconsType = {
   graduationCap: GraduationCap,
   map: Map,
   arrowRight: ArrowRight,
+  menu: Menu,
+  x: X,
 } 

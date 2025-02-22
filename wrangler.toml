@@ -5,6 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 [build]
 command = "npm run pages:build"
 output_dir = ".vercel/output/static"
+pages_build_output_dir = ".vercel/output/static"
 
 [env.production]
 NODE_VERSION = "20"

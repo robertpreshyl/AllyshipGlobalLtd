@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#E8F4F8"/>
+  
+  <!-- City Skyline -->
+  <g transform="translate(100, 200)" fill="#1A237E" opacity="0.1">
+    <!-- Buildings -->
+    <rect x="0" y="100" width="60" height="200"/>
+    <rect x="80" y="50" width="80" height="250"/>
+    <rect x="180" y="150" width="40" height="150"/>
+    <rect x="240" y="80" width="70" height="220"/>
+    <rect x="330" y="120" width="50" height="180"/>
+    <rect x="400" y="30" width="90" height="270"/>
+    <rect x="510" y="100" width="60" height="200"/>
+    <rect x="590" y="70" width="40" height="230"/>
+  </g>
+  
+  <!-- Smart City Elements -->
+  <g transform="translate(200, 150)" stroke="#1A237E" stroke-width="2" fill="none">
+    <circle cx="200" cy="100" r="40" opacity="0.3"/>
+    <line x1="160" y1="100" x2="240" y2="100" opacity="0.2"/>
+    <line x1="200" y1="60" x2="200" y2="140" opacity="0.2"/>
+    <circle cx="200" cy="100" r="20" opacity="0.4"/>
+  </g>
+  
+  <!-- Project Title -->
+  <text x="400" y="500" text-anchor="middle" font-family="Arial" font-size="24" fill="#1A237E">
+    Urban Living Project
+  </text>
+</svg> 
