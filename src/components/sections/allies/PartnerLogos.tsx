@@ -5,34 +5,34 @@ import { motion } from 'framer-motion'
 
 const partners = [
   {
-    name: 'Tech Innovate',
-    logo: '/images/partners/tech-innovate.svg',
-    sector: 'Technology'
+    name: 'Goldman Sachs',
+    logo: '/images/partners/goldman-sachs.svg',
+    sector: 'Investment Banking'
   },
   {
-    name: 'Global Energy Partners',
-    logo: '/images/partners/global-energy.svg',
-    sector: 'Energy'
+    name: 'BlackRock',
+    logo: '/images/partners/blackrock.svg',
+    sector: 'Asset Management'
   },
   {
-    name: 'RealEstate Prime',
-    logo: '/images/partners/realestate-prime.svg',
+    name: 'Brookfield',
+    logo: '/images/partners/brookfield.svg',
     sector: 'Real Estate'
   },
   {
-    name: 'Crypto Ventures',
-    logo: '/images/partners/crypto-ventures.svg',
-    sector: 'Cryptocurrency'
+    name: 'Masdar',
+    logo: '/images/partners/masdar.svg',
+    sector: 'Clean Energy'
   },
   {
-    name: 'Trade Alliance',
-    logo: '/images/partners/trade-alliance.svg',
-    sector: 'Import/Export'
+    name: 'Mubadala',
+    logo: '/images/partners/mubadala.svg',
+    sector: 'Sovereign Wealth'
   },
   {
-    name: 'Oil & Gas Global',
-    logo: '/images/partners/oil-gas-global.svg',
-    sector: 'Oil & Gas'
+    name: 'Temasek',
+    logo: '/images/partners/temasek.svg',
+    sector: 'Investment Company'
   }
 ]
 

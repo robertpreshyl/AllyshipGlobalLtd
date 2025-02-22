@@ -15,12 +15,12 @@ export function FeaturedPost() {
     author: {
       name: 'Robert Smith',
       role: 'Chief Investment Officer',
-      image: '/images/team/robert-smith.jpg',
+      image: '/images/team/robert-smith.svg',
     },
     category: 'Market Analysis',
     readTime: '8 min read',
     publishDate: 'March 15, 2024',
-    coverImage: '/images/blog/investment-trends-2024.jpg',
+    coverImage: '/images/blog/investment-trends-2024.svg'
   }
 
   return (
@@ -33,10 +33,13 @@ export function FeaturedPost() {
       <div className="grid gap-8 md:grid-cols-2">
         {/* Image Section */}
         <div className="relative aspect-[16/9] md:aspect-auto">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
-          <div className="flex h-full items-center justify-center">
-            <Icons.image className="h-12 w-12 text-muted-foreground/20" />
-          </div>
+          <Image
+            src={featuredPost.coverImage}
+            alt={featuredPost.title}
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
 
         {/* Content Section */}
@@ -52,7 +55,7 @@ export function FeaturedPost() {
 
           <h2 className="mt-4 font-heading text-2xl font-bold md:text-3xl">
             <Link
-              href={`/insights/${featuredPost.slug}`}
+              href={`/insights/posts/${featuredPost.slug}`}
               className="hover:text-primary"
             >
               {featuredPost.title}
@@ -65,18 +68,20 @@ export function FeaturedPost() {
 
           <div className="mt-6 flex items-center space-x-4">
             <div className="relative h-10 w-10 overflow-hidden rounded-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
-              <div className="flex h-full items-center justify-center">
-                <Icons.user className="h-6 w-6 text-muted-foreground/20" />
-              </div>
+              <Image
+                src={featuredPost.author.image}
+                alt={featuredPost.author.name}
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <p className="font-medium">{featuredPost.author.name}</p>
               <p className="text-sm text-muted-foreground">{featuredPost.author.role}</p>
             </div>
-            <div className="ml-auto flex items-center space-x-2 text-sm text-muted-foreground">
-              <Icons.clock className="h-4 w-4" />
-              <span>{featuredPost.readTime}</span>
+            <div className="ml-auto flex items-center text-sm text-muted-foreground">
+              <Icons.clock className="mr-2 h-4 w-4" />
+              {featuredPost.readTime}
             </div>
           </div>
         </div>

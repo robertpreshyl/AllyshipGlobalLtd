@@ -17,59 +17,59 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: '1',
-    title: 'Luxury Residential Complex',
-    description: 'Premium residential development in London\'s prime location.',
+    id: 'dubai-downtown',
+    title: 'Dubai Downtown Development',
+    description: 'Mixed-use development project in Dubai\'s prime business district.',
     sector: 'real-estate',
-    location: 'London, UK',
-    value: '$150M',
-    image: '/images/portfolio/real-estate-1.svg',
-  },
-  {
-    id: '2',
-    title: 'Solar Farm Initiative',
-    description: 'Large-scale solar energy project powering 50,000 homes.',
-    sector: 'energy',
     location: 'Dubai, UAE',
-    value: '$200M',
-    image: '/images/portfolio/energy-1.svg',
+    value: '$500M+',
+    image: '/images/portfolio/projects/dubai-downtown.svg'
   },
   {
-    id: '3',
-    title: 'Blockchain Platform',
-    description: 'Innovative blockchain solution for cross-border transactions.',
+    id: 'solar-initiative',
+    title: 'MENA Solar Initiative',
+    description: 'Large-scale solar power infrastructure project across Middle East.',
+    sector: 'energy',
+    location: 'Multiple MENA Regions',
+    value: '$750M+',
+    image: '/images/portfolio/projects/solar-initiative.svg'
+  },
+  {
+    id: 'smart-city',
+    title: 'Singapore Smart City',
+    description: 'Smart city technology integration and infrastructure development.',
     sector: 'technology',
     location: 'Singapore',
-    value: '$75M',
-    image: '/images/portfolio/tech-1.svg',
+    value: '$300M+',
+    image: '/images/portfolio/projects/smart-city.svg'
   },
   {
-    id: '4',
-    title: 'Global Trade Hub',
-    description: 'Strategic import/export facility connecting Asia and Europe.',
+    id: 'silk-route',
+    title: 'Modern Silk Route',
+    description: 'Cross-border trade infrastructure and logistics network.',
     sector: 'trade',
-    location: 'Rotterdam, Netherlands',
-    value: '$300M',
-    image: '/images/portfolio/trade-1.svg',
+    location: 'Asia-Europe Corridor',
+    value: '$1B+',
+    image: '/images/portfolio/projects/silk-route.svg'
   },
   {
-    id: '5',
-    title: 'Smart Office Complex',
-    description: 'Next-generation commercial space with IoT integration.',
+    id: 'london-commercial',
+    title: 'London Commercial Hub',
+    description: 'Premium commercial real estate development in London\'s financial district.',
     sector: 'real-estate',
-    location: 'New York, USA',
-    value: '$250M',
-    image: '/images/portfolio/real-estate-1.svg',
+    location: 'London, UK',
+    value: '$450M+',
+    image: '/images/portfolio/projects/london-commercial.svg'
   },
   {
-    id: '6',
-    title: 'Wind Farm Network',
-    description: 'Offshore wind energy project in the North Sea.',
+    id: 'renewable-grid',
+    title: 'Asian Renewable Grid',
+    description: 'Renewable energy infrastructure network across Asian markets.',
     sector: 'energy',
-    location: 'Copenhagen, Denmark',
-    value: '$400M',
-    image: '/images/portfolio/energy-1.svg',
-  },
+    location: 'Southeast Asia',
+    value: '$600M+',
+    image: '/images/portfolio/projects/renewable-grid.svg'
+  }
 ]
 
 const sectors = [

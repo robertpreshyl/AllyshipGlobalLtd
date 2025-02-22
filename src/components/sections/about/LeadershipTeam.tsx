@@ -20,55 +20,60 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    id: '1',
-    name: 'John Smith',
+    id: 'robert-smith',
+    name: 'Robert Smith',
     position: 'Chief Executive Officer',
-    bio: 'Over 20 years of experience in international investment and cross-border partnerships.',
-    imageUrl: '/images/team/john-smith.jpg',
+    bio: 'Former investment banker with 20+ years of experience in global markets.',
+    imageUrl: '/images/team/robert-smith.svg',
     socialLinks: {
-      linkedin: 'https://linkedin.com/in/john-smith',
-      twitter: 'https://twitter.com/johnsmith',
-    },
+      linkedin: 'https://linkedin.com/in/robert-smith',
+      twitter: 'https://twitter.com/robertsmith'
+    }
   },
   {
-    id: '2',
+    id: 'sarah-chen',
     name: 'Sarah Chen',
     position: 'Chief Investment Officer',
-    bio: 'Expert in emerging markets and sustainable investment strategies.',
-    imageUrl: '/images/team/sarah-chen.jpg',
+    bio: 'Expert in cross-border investments with focus on Asian markets.',
+    imageUrl: '/images/team/sarah-chen.svg',
     socialLinks: {
-      linkedin: 'https://linkedin.com/in/sarah-chen',
-    },
+      linkedin: 'https://linkedin.com/in/sarah-chen'
+    }
   },
   {
-    id: '3',
-    name: 'Mohammed Al-Rashid',
-    position: 'Head of Global Partnerships',
-    bio: 'Specializes in building strategic alliances across Middle East and Asia.',
-    imageUrl: '/images/team/mohammed-al-rashid.jpg',
+    id: 'michael-patel',
+    name: 'Michael Patel',
+    position: 'Head of Technology',
+    bio: 'Technology veteran specializing in fintech and blockchain solutions.',
+    imageUrl: '/images/team/michael-patel.svg',
     socialLinks: {
-      linkedin: 'https://linkedin.com/in/mohammed-al-rashid',
-      twitter: 'https://twitter.com/malrashid',
-    },
+      linkedin: 'https://linkedin.com/in/michael-patel',
+      twitter: 'https://twitter.com/mpatel'
+    }
   },
   {
-    id: '4',
-    name: 'Elena Petrova',
+    id: 'emma-mueller',
+    name: 'Emma Mueller',
     position: 'Director of Operations',
-    bio: 'Drives operational excellence and digital transformation initiatives.',
-    imageUrl: '/images/team/elena-petrova.jpg',
+    bio: 'Operations expert with extensive experience in European markets.',
+    imageUrl: '/images/team/emma-mueller.svg',
     socialLinks: {
-      linkedin: 'https://linkedin.com/in/elena-petrova',
-    },
-  },
+      linkedin: 'https://linkedin.com/in/emma-mueller'
+    }
+  }
 ]
 
 export function LeadershipTeam() {
   const [isMounted, setIsMounted] = useState(false)
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
+
+  const handleImageLoad = (memberId: string) => {
+    setLoadedImages((prev) => ({ ...prev, [memberId]: true }))
+  }
 
   return (
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -85,45 +90,48 @@ export function LeadershipTeam() {
             {/* Image Container */}
             <div className="aspect-square overflow-hidden">
               <div className="relative h-full w-full bg-muted">
-                {/* Placeholder gradient while image loads */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
-                
-                {/* Replace with actual images once available */}
-                <div className="flex h-full items-center justify-center">
-                  <Icons.user className="h-32 w-32 text-muted-foreground/20" />
-                </div>
+                {!loadedImages[member.id] && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icons.user className="h-32 w-32 text-muted-foreground/20" />
+                  </div>
+                )}
+                <Image
+                  src={member.imageUrl}
+                  alt={member.name}
+                  fill
+                  className={`object-cover transition-opacity duration-300 group-hover:scale-105 ${
+                    loadedImages[member.id] ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  onLoad={() => handleImageLoad(member.id)}
+                />
               </div>
             </div>
 
             {/* Content */}
-            <div className="p-6">
-              <h3 className="mb-1 font-heading text-xl font-semibold">{member.name}</h3>
-              <p className="mb-2 text-sm text-primary">{member.position}</p>
-              <p className="mb-4 text-sm text-muted-foreground">{member.bio}</p>
-
-              {/* Social Links */}
-              <div className="flex space-x-3">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+              <h3 className="font-heading text-lg font-semibold">{member.name}</h3>
+              <p className="mb-2 text-sm text-gray-300">{member.position}</p>
+              <p className="mb-4 text-sm text-gray-300">{member.bio}</p>
+              <div className="flex space-x-4">
                 {member.socialLinks.linkedin && (
-                  <Link
+                  <a
                     href={member.socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary"
+                    className="text-white hover:text-primary"
                   >
                     <Icons.linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Link>
+                  </a>
                 )}
                 {member.socialLinks.twitter && (
-                  <Link
+                  <a
                     href={member.socialLinks.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary"
+                    className="text-white hover:text-primary"
                   >
                     <Icons.twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </Link>
+                  </a>
                 )}
               </div>
             </div>

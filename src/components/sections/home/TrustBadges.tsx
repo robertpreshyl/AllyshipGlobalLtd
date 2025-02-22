@@ -7,24 +7,24 @@ import { motion, AnimatePresence } from 'framer-motion'
 const trustBadges = [
   {
     name: 'Financial Times',
-    image: '/images/badges/ft-logo.svg',
-    quote: 'Leading innovator in cross-border investments',
+    image: '/images/badges/financial-times.svg',
+    quote: 'Leading innovator in cross-border investments'
   },
   {
     name: 'Bloomberg',
-    image: '/images/badges/bloomberg-logo.svg',
-    quote: 'Top 10 emerging investment firms to watch',
+    image: '/images/badges/bloomberg.svg',
+    quote: 'Top 10 emerging investment firms to watch'
   },
   {
     name: 'ISO 27001',
-    image: '/images/badges/iso-logo.svg',
-    quote: 'Certified for information security management',
+    image: '/images/badges/iso-27001.svg',
+    quote: 'Certified for information security management'
   },
   {
     name: 'Forbes',
-    image: '/images/badges/forbes-logo.svg',
-    quote: 'Pioneering global investment partnerships',
-  },
+    image: '/images/badges/forbes.svg',
+    quote: 'Pioneering global investment partnerships'
+  }
 ] as const
 
 export function TrustBadges() {

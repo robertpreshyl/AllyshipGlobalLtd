@@ -19,29 +19,53 @@ interface FeaturedProject {
 
 const featuredProjects: FeaturedProject[] = [
   {
-    id: '1',
-    title: 'Dubai Marina Development',
-    description: 'Luxury waterfront development featuring residential towers and retail spaces.',
-    sector: 'Real Estate',
+    id: 'dubai-mega-development',
+    title: 'Dubai Mega Development',
+    description: 'A landmark mixed-use development project featuring luxury residential towers, premium office spaces, and a world-class retail complex.',
+    sector: 'Real Estate & Infrastructure',
     stats: [
-      { label: 'Investment', value: '$500M', icon: 'building' },
-      { label: 'Location', value: 'Dubai, UAE', icon: 'mapPin' },
-      { label: 'ROI', value: '25%', icon: 'chartBar' },
+      {
+        label: 'Total Investment',
+        value: '$2.5B',
+        icon: 'building'
+      },
+      {
+        label: 'Project Area',
+        value: '1.2M sqm',
+        icon: 'layout'
+      },
+      {
+        label: 'Completion',
+        value: '2026',
+        icon: 'target'
+      }
     ],
-    image: '/images/portfolio/featured-1.jpg',
+    image: '/images/portfolio/featured/dubai-mega.svg'
   },
   {
-    id: '2',
-    title: 'Green Energy Initiative',
-    description: 'Comprehensive renewable energy project combining solar and wind power generation.',
-    sector: 'Energy',
+    id: 'green-energy-initiative',
+    title: 'MENA Green Energy Initiative',
+    description: 'Comprehensive renewable energy infrastructure project combining solar, wind, and smart grid technologies across the MENA region.',
+    sector: 'Energy & Sustainability',
     stats: [
-      { label: 'Investment', value: '$750M', icon: 'zap' },
-      { label: 'Location', value: 'Multiple', icon: 'mapPin' },
-      { label: 'Impact', value: '1M Homes', icon: 'chartBar' },
+      {
+        label: 'Investment Size',
+        value: '$3.8B',
+        icon: 'building'
+      },
+      {
+        label: 'Power Output',
+        value: '5 GW',
+        icon: 'zap'
+      },
+      {
+        label: 'Carbon Reduction',
+        value: '4.2M tons',
+        icon: 'shield'
+      }
     ],
-    image: '/images/portfolio/featured-2.jpg',
-  },
+    image: '/images/portfolio/featured/green-energy.svg'
+  }
 ]
 
 export function ProjectShowcase() {

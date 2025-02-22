@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F5F5F5"/>
+  <!-- Abstract background pattern -->
+  <path d="M0 200 L400 200" stroke="#1A237E" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M200 0 L200 400" stroke="#1A237E" stroke-width="1" stroke-opacity="0.1"/>
+  <circle cx="200" cy="200" r="150" stroke="#1A237E" stroke-width="1" stroke-opacity="0.1" fill="none"/>
+  <!-- Person silhouette -->
+  <g transform="translate(200, 200)">
+    <!-- Head -->
+    <circle cx="0" cy="-60" r="40" fill="#1A237E" opacity="0.2"/>
+    <!-- Body -->
+    <path d="M-40 0 Q0 100 40 0" stroke="#1A237E" stroke-width="4" opacity="0.2" fill="none"/>
+    <!-- Shoulders -->
+    <path d="M-40 0 H40" stroke="#1A237E" stroke-width="4" opacity="0.2"/>
+  </g>
+</svg> 
