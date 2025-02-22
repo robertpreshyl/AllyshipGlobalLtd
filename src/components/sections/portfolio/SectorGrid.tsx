@@ -15,6 +15,13 @@ interface Project {
   image: string
 }
 
+const sectorIconMap = {
+  'real-estate': 'building',
+  'energy': 'zap',
+  'technology': 'cpu',
+  'trade': 'ship',
+} as const
+
 const projects: Project[] = [
   {
     id: 'dubai-downtown',
@@ -91,27 +98,47 @@ export function SectorGrid() {
       {/* Filter Buttons */}
       <div className="mb-8 flex flex-wrap justify-center gap-4">
         <AnimatePresence mode="wait">
-          {isMounted && sectors.map((sector) => {
-            const Icon = Icons[sector as keyof typeof Icons]
-            return (
+          {isMounted && (
+            <>
               <motion.button
-                key={sector}
+                key="all"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}
-                onClick={() => setSelectedSector(sector)}
+                onClick={() => setSelectedSector('all')}
                 className={`flex items-center space-x-2 rounded-full px-6 py-2 text-sm font-medium transition-colors
                   ${
-                    selectedSector === sector
+                    selectedSector === 'all'
                       ? 'bg-primary text-white'
                       : 'bg-muted hover:bg-primary/10'
                   }`}
               >
-                <Icon className="h-4 w-4" />
-                <span>{sector}</span>
+                <Icons.briefcase className="h-4 w-4" />
+                <span>All Sectors</span>
               </motion.button>
-            )
-          })}
+              {sectors.map((sector) => {
+                const Icon = Icons[sectorIconMap[sector as keyof typeof sectorIconMap]]
+                return (
+                  <motion.button
+                    key={sector}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.05 }}
+                    onClick={() => setSelectedSector(sector)}
+                    className={`flex items-center space-x-2 rounded-full px-6 py-2 text-sm font-medium transition-colors
+                      ${
+                        selectedSector === sector
+                          ? 'bg-primary text-white'
+                          : 'bg-muted hover:bg-primary/10'
+                      }`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{sector.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
+                  </motion.button>
+                )
+              })}
+            </>
+          )}
         </AnimatePresence>
       </div>
 
