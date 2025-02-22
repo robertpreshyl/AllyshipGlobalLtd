@@ -105,7 +105,7 @@ AllyshipGlobalLtd/
 │   └── styles/       # Global styles
 ├── public/           # Static assets
 ├── docs/            # Documentation
-└── .cloudflare/     # Cloudflare configuration
+└── .cloudflare/     # Cloudflare configurations
 ```
 
 ## 🤝 Contributing
