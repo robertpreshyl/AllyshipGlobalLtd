@@ -10,7 +10,16 @@ import { Icons } from '@/components/common/Icons'
 interface NavItem {
   title: string
   href: string
+  icon?: keyof typeof Icons
 }
+
+const navItems: NavItem[] = [
+  { title: 'Home', href: '/', icon: 'home' },
+  { title: 'About', href: '/about', icon: 'users' },
+  { title: 'Portfolio', href: '/portfolio', icon: 'briefcase' },
+  { title: 'Allies', href: '/allies', icon: 'handshake' },
+  { title: 'Contact', href: '/contact', icon: 'mail' },
+]
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -59,7 +68,7 @@ export function Header() {
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex">
-            {navigationConfig.mainNav.map((item: NavItem) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -91,51 +100,85 @@ export function Header() {
             e.stopPropagation()
             setIsOpen(!isOpen)
           }}
-          className="flex items-center justify-center rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden"
+          className="flex items-center justify-center rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
-          {isOpen ? (
-            <Icons.x className="h-6 w-6" />
-          ) : (
-            <Icons.menu className="h-6 w-6" />
-          )}
+          <motion.div
+            animate={{ rotate: isOpen ? 90 : 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {isOpen ? (
+              <Icons.x className="h-6 w-6" />
+            ) : (
+              <Icons.menu className="h-6 w-6" />
+            )}
+          </motion.div>
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 top-[64px] border-t bg-white shadow-lg md:hidden"
-          >
-            <nav className="container flex flex-col py-4">
-              {navigationConfig.mainNav.map((item: NavItem) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    'flex items-center px-4 py-3 text-sm font-medium transition-colors hover:bg-gray-100',
-                    item.href === '/' ? 'text-primary' : 'text-gray-600'
-                  )}
-                >
-                  {item.title}
-                </Link>
-              ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="mx-4 mt-4 flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
-              >
-                Get Started
-              </Link>
-            </nav>
-          </motion.div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+            
+            {/* Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="absolute left-0 right-0 top-[64px] border-t bg-white shadow-lg md:hidden"
+            >
+              <nav className="container divide-y divide-gray-100">
+                <div className="py-2">
+                  {navItems.map((item, index) => {
+                    const Icon = item.icon ? Icons[item.icon] : null
+                    return (
+                      <motion.div
+                        key={item.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className={cn(
+                            'flex items-center space-x-4 px-4 py-3 text-base font-medium transition-colors',
+                            'hover:bg-gray-50 active:bg-gray-100',
+                            item.href === '/' ? 'text-primary' : 'text-gray-600'
+                          )}
+                        >
+                          {Icon && <Icon className="h-5 w-5" />}
+                          <span>{item.title}</span>
+                        </Link>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+                <div className="p-4">
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center space-x-2 rounded-full bg-primary px-6 py-3 text-base font-medium text-white transition-all hover:bg-primary/90 active:scale-95"
+                  >
+                    <Icons.arrowRight className="h-5 w-5" />
+                    <span>Get Started</span>
+                  </Link>
+                </div>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

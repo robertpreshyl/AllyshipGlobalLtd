@@ -28,6 +28,9 @@ import {
   ArrowRight,
   Menu,
   X,
+  Home,
+  Users,
+  Briefcase,
 } from 'lucide-react'
 
 interface IconsType {
@@ -61,4 +64,7 @@ export const Icons: IconsType = {
   arrowRight: ArrowRight,
   menu: Menu,
   x: X,
+  home: Home,
+  users: Users,
+  briefcase: Briefcase,
 } 
