@@ -31,6 +31,7 @@ import {
   Home,
   Users,
   Briefcase,
+  Cloud,
 } from 'lucide-react'
 
 interface IconsType {
@@ -67,4 +68,5 @@ export const Icons: IconsType = {
   home: Home,
   users: Users,
   briefcase: Briefcase,
+  cloud: Cloud,
 } 

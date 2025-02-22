@@ -15,12 +15,12 @@ interface Project {
   image: string
 }
 
-const sectorIconMap = {
+const sectorIconMap: Record<'real-estate' | 'energy' | 'technology' | 'trade', keyof typeof Icons> = {
   'real-estate': 'building',
   'energy': 'zap',
   'technology': 'cpu',
   'trade': 'ship',
-} as const
+}
 
 const projects: Project[] = [
   {
