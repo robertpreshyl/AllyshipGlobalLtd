@@ -1,9 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Icons } from '@/components/common/Icons'
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip"
 
 interface Partner {
@@ -52,45 +48,7 @@ const partners: Partner[] = [
   },
 ]
 
-const partnerTypes = [
-  { id: 'all', label: 'All Partners', icon: null },
-  { id: 'investor', label: 'Investment Partners', icon: 'building' },
-  { id: 'strategic', label: 'Strategic Partners', icon: 'handshake' },
-  { id: 'operational', label: 'Operational Partners', icon: 'chartBar' },
-] as const
-
 export function PartnerNetwork() {
-  const [selectedType, setSelectedType] = useState<string>('all')
-  const [isMounted, setIsMounted] = useState(false)
-  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  const handleImageLoad = (partnerId: string) => {
-    setLoadedImages((prev) => ({ ...prev, [partnerId]: true }))
-  }
-
-  const handleImageError = (partnerId: string) => {
-    setLoadedImages((prev) => ({ ...prev, [partnerId]: false }))
-  }
-
-  const getPartnerTypeIcon = (type: Partner['designation']) => {
-    switch (type) {
-      case 'Investment Partner':
-        return <Icons.building className="mr-1 h-4 w-4" />
-      case 'Strategic Partner':
-        return <Icons.handshake className="mr-1 h-4 w-4" />
-      case 'Operational Partner':
-        return <Icons.chartBar className="mr-1 h-4 w-4" />
-    }
-  }
-
-  const filteredPartners = partners.filter(
-    (partner) => selectedType === 'all' || partner.designation === selectedType
-  )
-
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">

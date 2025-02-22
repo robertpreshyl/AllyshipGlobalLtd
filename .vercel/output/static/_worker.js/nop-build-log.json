@@ -1,5 +1,5 @@
 {
-  "timestamp": 1740249447140,
+  "timestamp": 1740249764329,
   "outputDir": ".vercel/output/static/_worker.js",
   "versions": {
     "@cloudflare/next-on-pages": "1.13.8"
@@ -15,8 +15,6 @@
     "staticAssets": [
       "/404/index.html",
       "/404.html",
-      "/_next/static/MMUm24fcuuTGruFBmtcWK/_buildManifest.js",
-      "/_next/static/MMUm24fcuuTGruFBmtcWK/_ssgManifest.js",
       "/_next/static/chunks/173-78d7983752b4e274.js",
       "/_next/static/chunks/181-ae2cda053c187c13.js",
       "/_next/static/chunks/411-c71736163fdf49b0.js",
@@ -60,6 +58,8 @@
       "/_next/static/media/a34f9d1faa5f3315-s.p.woff2",
       "/_next/static/media/c7eb187887c48af6-s.woff2",
       "/_next/static/media/df0a9ae256c0569c-s.woff2",
+      "/_next/static/uFyckw8DVJKRoDHtz_05M/_buildManifest.js",
+      "/_next/static/uFyckw8DVJKRoDHtz_05M/_ssgManifest.js",
       "/_worker.js",
       "/about/index.html",
       "/about/index.txt",

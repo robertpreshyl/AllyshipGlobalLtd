@@ -1,6 +1,5 @@
 'use client'
 
-import { Icons } from '@/components/common/Icons'
 import { BlogPostHeader } from './BlogPostHeader'
 
 interface BlogPostProps {

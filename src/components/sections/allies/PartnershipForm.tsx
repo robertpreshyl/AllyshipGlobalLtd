@@ -67,13 +67,11 @@ export function PartnershipForm() {
       return
     }
 
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-
     try {
-      // TODO: Implement actual form submission
-      await new Promise(resolve => setTimeout(resolve, 1500)) // Simulated API call
-      setSubmitStatus('success')
+      // Simulated API call
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      
+      // Reset form
       setFormData({
         name: '',
         company: '',
@@ -82,10 +80,12 @@ export function PartnershipForm() {
         type: '',
         message: '',
       })
-    } catch (error) {
+      
+      // Show success message
+      setSubmitStatus('success')
+    } catch {
+      // Show error message
       setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
     }
   }
 

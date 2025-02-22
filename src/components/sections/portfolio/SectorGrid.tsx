@@ -72,15 +72,7 @@ const projects: Project[] = [
   }
 ]
 
-const sectors = [
-  { id: 'all', label: 'All Sectors', icon: null },
-  { id: 'real-estate', label: 'Real Estate', icon: 'building' },
-  { id: 'energy', label: 'Energy', icon: 'zap' },
-  { id: 'technology', label: 'Technology', icon: 'cpu' },
-  { id: 'trade', label: 'Import/Export', icon: 'ship' },
-] as const
-
-type SectorType = typeof sectors[number]
+const sectors = ['real-estate', 'energy', 'technology', 'trade'] as const
 
 export function SectorGrid() {
   const [selectedSector, setSelectedSector] = useState<string>('all')
@@ -100,23 +92,23 @@ export function SectorGrid() {
       <div className="mb-8 flex flex-wrap justify-center gap-4">
         <AnimatePresence mode="wait">
           {isMounted && sectors.map((sector) => {
-            const Icon = sector.icon ? Icons[sector.icon as keyof typeof Icons] : null
+            const Icon = Icons[sector as keyof typeof Icons]
             return (
               <motion.button
-                key={sector.id}
+                key={sector}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.05 }}
-                onClick={() => setSelectedSector(sector.id)}
+                onClick={() => setSelectedSector(sector)}
                 className={`flex items-center space-x-2 rounded-full px-6 py-2 text-sm font-medium transition-colors
                   ${
-                    selectedSector === sector.id
+                    selectedSector === sector
                       ? 'bg-primary text-white'
                       : 'bg-muted hover:bg-primary/10'
                   }`}
               >
-                {Icon && <Icon className="h-4 w-4" />}
-                <span>{sector.label}</span>
+                <Icon className="h-4 w-4" />
+                <span>{sector}</span>
               </motion.button>
             )
           })}

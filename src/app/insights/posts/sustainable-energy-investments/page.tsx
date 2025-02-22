@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { BlogPost } from '@/components/blog/BlogPost'
-import { Icons } from '@/components/common/Icons'
 
 export const metadata: Metadata = {
   title: 'The Rise of Sustainable Energy Investments | Allyship Global Ltd',
