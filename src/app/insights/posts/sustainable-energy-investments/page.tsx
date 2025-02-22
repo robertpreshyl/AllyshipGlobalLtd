@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Explore how green energy investments are reshaping the global investment landscape and creating new opportunities for forward-thinking investors.',
 }
 
-export default function SustainableEnergyPage() {
+const SustainableEnergyPage = () => {
   return (
     <article className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
@@ -175,4 +175,6 @@ export default function SustainableEnergyPage() {
       </div>
     </article>
   )
-} 
+}
+
+export default SustainableEnergyPage 

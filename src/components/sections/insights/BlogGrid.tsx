@@ -7,7 +7,7 @@ import { Icons } from '@/components/common/Icons'
 // This will be replaced with actual data from the CMS
 const blogPosts = [
   {
-    slug: 'posts/real-estate-opportunities-2024',
+    slug: '/insights/posts/real-estate-opportunities-2024',
     title: 'Emerging Real Estate Opportunities in Global Markets',
     excerpt: 'Discover promising real estate investment opportunities across key global markets.',
     category: 'Market Analysis',
@@ -19,7 +19,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'posts/sustainable-energy-investments',
+    slug: '/insights/posts/sustainable-energy-investments',
     title: 'The Rise of Sustainable Energy Investments',
     excerpt: 'How green energy is reshaping the global investment landscape.',
     category: 'Industry Insights',
@@ -31,7 +31,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'posts/crypto-market-analysis',
+    slug: '/insights/posts/crypto-market-analysis',
     title: 'Cryptocurrency Market: A Strategic Analysis',
     excerpt: 'Understanding the evolving cryptocurrency market and investment opportunities.',
     category: 'Investment Strategy',
@@ -43,7 +43,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'cross-border-investment-guide',
+    slug: '/insights/posts/cross-border-investment-guide',
     title: 'Guide to Cross-Border Investments',
     excerpt: 'Essential strategies for successful international investment ventures.',
     category: 'Educational',
@@ -55,7 +55,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'oil-gas-sector-outlook',
+    slug: '/insights/posts/oil-gas-sector-outlook',
     title: 'Oil & Gas Sector: 2024 Outlook',
     excerpt: 'Analysis of trends and opportunities in the energy sector.',
     category: 'Market Analysis',
@@ -67,7 +67,7 @@ const blogPosts = [
     },
   },
   {
-    slug: 'tech-investment-trends',
+    slug: '/insights/posts/tech-investment-trends',
     title: 'Technology Investment Trends to Watch',
     excerpt: 'Key technology sectors and companies driving innovation and growth.',
     category: 'Industry Insights',
@@ -91,7 +91,7 @@ export function BlogGrid() {
           transition={{ delay: index * 0.1 }}
           className="group overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-shadow hover:shadow-md"
         >
-          <Link href={`/insights/${post.slug}`} className="block">
+          <Link href={post.slug} className="block">
             <div className="flex items-center space-x-3">
               <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                 {post.category}

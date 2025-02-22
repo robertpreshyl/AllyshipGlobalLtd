@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Discover promising real estate investment opportunities across key global markets, with insights on emerging trends and strategic investment approaches.',
 }
 
-export default function RealEstateOpportunitiesPage() {
+const RealEstateOpportunitiesPage = () => {
   return (
     <article className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
@@ -150,4 +150,6 @@ export default function RealEstateOpportunitiesPage() {
       </div>
     </article>
   )
-} 
+}
+
+export default RealEstateOpportunitiesPage 

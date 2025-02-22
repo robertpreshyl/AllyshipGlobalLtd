@@ -5,7 +5,7 @@ export const metadata = {
   description: 'In-depth analysis of the evolving cryptocurrency market, investment opportunities, and strategic approaches to digital asset investment.',
 }
 
-export default function CryptoMarketAnalysisPage() {
+const CryptoMarketAnalysisPage = () => {
   return (
     <article className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
@@ -198,4 +198,6 @@ export default function CryptoMarketAnalysisPage() {
       </div>
     </article>
   )
-} 
+}
+
+export default CryptoMarketAnalysisPage 
