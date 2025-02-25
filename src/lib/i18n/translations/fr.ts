@@ -7,6 +7,7 @@ export const translations: Translations = {
     contactUs: 'Contactez-nous',
     menu: 'Ouvrir le menu',
     close: 'Fermer le menu',
+    explore: 'Explorer',
   },
   nav: {
     home: 'Accueil',
@@ -19,11 +20,19 @@ export const translations: Translations = {
     hero: {
       title: 'Unir les Alliés Mondiaux pour des Investissements Stratégiques',
       subtitle: 'Construire des ponts entre les frontières et les secteurs',
+      trusted: 'Reconnu par les leaders de l\'industrie dans le monde entier',
     },
     stats: {
       countries: 'Pays',
       partners: 'Partenaires',
       investments: 'Investissements',
+    },
+    sectors: {
+      title: 'Secteurs d\'Investissement',
+      subtitle: 'Investissements diversifiés dans des secteurs clés mondiaux',
+    },
+    trustBadges: {
+      title: 'Reconnu par les Leaders de l\'Industrie',
     },
   },
   about: {

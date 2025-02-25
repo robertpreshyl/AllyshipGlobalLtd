@@ -1,15 +1,15 @@
 import { HeroSection } from '@/components/sections/home/HeroSection'
-import { QuickStats } from '@/components/sections/home/QuickStats'
-import { InvestmentSectors } from '@/components/sections/home/InvestmentSectors'
-import { TrustBadges } from '@/components/sections/home/TrustBadges'
+import { StatsSection } from '@/components/sections/home/StatsSection'
+import { SectorsSection } from '@/components/sections/home/SectorsSection'
+import { TrustBadgesSection } from '@/components/sections/home/TrustBadgesSection'
 
 export default function HomePage() {
   return (
-    <>
+    <main>
       <HeroSection />
-      <QuickStats />
-      <InvestmentSectors />
-      <TrustBadges />
-    </>
+      <StatsSection />
+      <SectorsSection />
+      <TrustBadgesSection />
+    </main>
   )
 }

@@ -16,6 +16,7 @@ import {
   Zap,
   Image,
   ChevronDown,
+  ChevronUp,
   Clock,
   Shield,
   User,
@@ -32,6 +33,9 @@ import {
   Users,
   Briefcase,
   Cloud,
+  DollarSign,
+  Globe,
+  Star,
 } from 'lucide-react'
 
 interface IconsType {
@@ -53,6 +57,7 @@ export const Icons: IconsType = {
   zap: Zap,
   image: Image,
   chevronDown: ChevronDown,
+  chevronUp: ChevronUp,
   clock: Clock,
   shield: Shield,
   user: User,
@@ -69,4 +74,7 @@ export const Icons: IconsType = {
   users: Users,
   briefcase: Briefcase,
   cloud: Cloud,
+  dollarSign: DollarSign,
+  globe: Globe,
+  star: Star,
 } 

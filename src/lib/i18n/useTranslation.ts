@@ -6,6 +6,10 @@ import { translations as frTranslations } from './translations/fr'
 import { translations as esTranslations } from './translations/es'
 import { translations as zhTranslations } from './translations/zh'
 import { translations as arTranslations } from './translations/ar'
+import { translations as fiTranslations } from './translations/fi'
+import { translations as deTranslations } from './translations/de'
+import { translations as jaTranslations } from './translations/ja'
+import { translations as ptTranslations } from './translations/pt'
 
 // Import all translations
 const translations: Record<string, Translations> = {
@@ -14,6 +18,10 @@ const translations: Record<string, Translations> = {
   es: esTranslations,
   zh: zhTranslations,
   ar: arTranslations,
+  fi: fiTranslations,
+  de: deTranslations,
+  ja: jaTranslations,
+  pt: ptTranslations,
 }
 
 type Path<T> = T extends string

@@ -7,6 +7,7 @@ export const translations: Translations = {
     contactUs: 'Contáctenos',
     menu: 'Abrir menú',
     close: 'Cerrar menú',
+    explore: 'Explorar',
   },
   nav: {
     home: 'Inicio',
@@ -19,11 +20,19 @@ export const translations: Translations = {
     hero: {
       title: 'Uniendo Aliados Globales para Inversiones Estratégicas',
       subtitle: 'Construyendo puentes entre fronteras y sectores',
+      trusted: 'Confiado por líderes de la industria en todo el mundo',
     },
     stats: {
       countries: 'Países',
       partners: 'Socios',
       investments: 'Inversiones',
+    },
+    sectors: {
+      title: 'Sectores de Inversión',
+      subtitle: 'Inversiones diversificadas en sectores globales clave',
+    },
+    trustBadges: {
+      title: 'Confiado por Líderes de la Industria',
     },
   },
   about: {

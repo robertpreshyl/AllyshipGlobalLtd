@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'fr' | 'es' | 'zh' | 'ar'
+export type Locale = 'en' | 'fr' | 'es' | 'zh' | 'ar' | 'fi' | 'de' | 'ja' | 'pt'
 
 export interface LocaleConfig {
   name: string
@@ -39,13 +39,37 @@ export const locales: Record<Locale, LocaleConfig> = {
     flag: '🇦🇪',
     dir: 'rtl',
     code: 'ar'
+  },
+  fi: {
+    name: 'Suomi',
+    flag: '🇫🇮',
+    dir: 'ltr',
+    code: 'fi'
+  },
+  de: {
+    name: 'Deutsch',
+    flag: '🇩🇪',
+    dir: 'ltr',
+    code: 'de'
+  },
+  ja: {
+    name: '日本語',
+    flag: '🇯🇵',
+    dir: 'ltr',
+    code: 'ja'
+  },
+  pt: {
+    name: 'Português',
+    flag: '🇵🇹',
+    dir: 'ltr',
+    code: 'pt'
   }
 }
 
 export const regions = {
-  APAC: ['zh'],
-  EMEA: ['en', 'fr', 'ar'],
-  LATAM: ['es']
+  APAC: ['zh', 'ja'],
+  EMEA: ['en', 'fr', 'ar', 'de', 'fi'],
+  LATAM: ['es', 'pt']
 } as const
 
 export type Region = keyof typeof regions 

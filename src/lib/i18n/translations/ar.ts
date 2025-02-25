@@ -7,6 +7,7 @@ export const translations: Translations = {
     contactUs: 'اتصل بنا',
     menu: 'فتح القائمة',
     close: 'إغلاق القائمة',
+    explore: 'استكشاف',
   },
   nav: {
     home: 'الرئيسية',
@@ -19,11 +20,19 @@ export const translations: Translations = {
     hero: {
       title: 'توحيد الحلفاء العالميين للاستثمارات الاستراتيجية',
       subtitle: 'بناء الجسور عبر الحدود والقطاعات',
+      trusted: 'موثوق به من قبل قادة الصناعة في جميع أنحاء العالم',
     },
     stats: {
       countries: 'الدول',
       partners: 'الشركاء',
       investments: 'الاستثمارات',
+    },
+    sectors: {
+      title: 'قطاعات الاستثمار',
+      subtitle: 'استثمارات متنوعة في القطاعات العالمية الرئيسية',
+    },
+    trustBadges: {
+      title: 'موثوق به من قبل قادة الصناعة',
     },
   },
   about: {

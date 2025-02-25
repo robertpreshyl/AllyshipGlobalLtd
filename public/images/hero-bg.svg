@@ -1,0 +1,39 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad)" />
+  
+  <!-- Grid lines representing global markets -->
+  <g opacity="0.05">
+    <path d="M0,200 H1920 M0,400 H1920 M0,600 H1920 M0,800 H1920 M0,1000 H1920" stroke="white" stroke-width="1" />
+    <path d="M200,0 V1080 M400,0 V1080 M600,0 V1080 M800,0 V1080 M1000,0 V1080 M1200,0 V1080 M1400,0 V1080 M1600,0 V1080 M1800,0 V1080" stroke="white" stroke-width="1" />
+  </g>
+  
+  <!-- Abstract geometric shapes representing global connections -->
+  <g opacity="0.1">
+    <polygon points="300,200 500,300 400,500 200,400" fill="white" />
+    <polygon points="1600,300 1800,400 1700,600 1500,500" fill="white" />
+    <polygon points="900,700 1100,800 1000,1000 800,900" fill="white" />
+  </g>
+  
+  <!-- Digital circuit-like lines suggesting technology and connectivity -->
+  <g opacity="0.08" stroke="white" stroke-width="1.5">
+    <path d="M100,100 L300,100 L300,300 L500,300 L500,500" fill="none" />
+    <path d="M1800,900 L1600,900 L1600,700 L1400,700 L1400,500" fill="none" />
+    <path d="M900,200 L1100,200 L1100,400 L1300,400 L1300,600" fill="none" />
+  </g>
+  
+  <!-- Subtle glow effects -->
+  <circle cx="300" cy="300" r="100" fill="white" opacity="0.03" filter="blur(40px)" />
+  <circle cx="1600" cy="800" r="150" fill="white" opacity="0.03" filter="blur(60px)" />
+  <circle cx="1000" cy="500" r="200" fill="white" opacity="0.03" filter="blur(80px)" />
+</svg> 

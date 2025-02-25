@@ -7,6 +7,7 @@ export const translations: Translations = {
     contactUs: '联系我们',
     menu: '打开菜单',
     close: '关闭菜单',
+    explore: '探索',
   },
   nav: {
     home: '首页',
@@ -19,11 +20,19 @@ export const translations: Translations = {
     hero: {
       title: '联合全球盟友进行战略投资',
       subtitle: '跨越边界和行业架设桥梁',
+      trusted: '全球行业领导者信赖',
     },
     stats: {
       countries: '国家',
       partners: '合作伙伴',
       investments: '投资项目',
+    },
+    sectors: {
+      title: '投资领域',
+      subtitle: '在全球关键领域的多元化投资',
+    },
+    trustBadges: {
+      title: '行业领导者信赖',
     },
   },
   about: {

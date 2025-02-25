@@ -5,6 +5,7 @@ export const translations = {
     contactUs: 'Contact Us',
     menu: 'Toggle menu',
     close: 'Close menu',
+    explore: 'Explore',
   },
   nav: {
     home: 'Home',
@@ -17,11 +18,19 @@ export const translations = {
     hero: {
       title: 'Uniting Global Allies for Strategic Investments',
       subtitle: 'Building bridges across borders and sectors',
+      trusted: 'Trusted by industry leaders worldwide',
     },
     stats: {
       countries: 'Countries',
       partners: 'Partners',
       investments: 'Investments',
+    },
+    sectors: {
+      title: 'Investment Sectors',
+      subtitle: 'Diversified investments across key global sectors',
+    },
+    trustBadges: {
+      title: 'Trusted By Industry Leaders',
     },
   },
   about: {

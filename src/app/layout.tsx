@@ -6,6 +6,7 @@ import { siteConfig } from '@/lib/constants/config'
 import { Header } from '@/components/layout/Header/Header'
 import { Footer } from '@/components/layout/Footer/Footer'
 import { CookieConsentBanner } from '@/components/common/CookieConsentBanner'
+import { FloatingCTA } from '@/components/common/FloatingCTA'
 import './globals.css'
 import { LanguageProvider } from '@/lib/i18n/LanguageContext'
 
@@ -62,6 +63,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <CookieConsentBanner />
+          <FloatingCTA />
           <Analytics />
         </LanguageProvider>
       </body>
