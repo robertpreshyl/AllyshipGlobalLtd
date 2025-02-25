@@ -1,0 +1,187 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.5" stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="groundGradient" x1="0" y1="300" x2="0" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D97706"/>
+      <stop offset="1" stop-color="#92400E"/>
+    </linearGradient>
+    <linearGradient id="buildingGradient1" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="buildingGradient2" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <pattern id="windowPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" x="1" y="1" fill="#60A5FA" opacity="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#skyGradient)"/>
+  <rect y="300" width="800" height="150" fill="url(#groundGradient)"/>
+  
+  <!-- Stars in sky -->
+  <g fill="white">
+    <circle cx="100" cy="50" r="1" opacity="0.8"/>
+    <circle cx="150" cy="80" r="1" opacity="0.6"/>
+    <circle cx="200" cy="30" r="1" opacity="0.7"/>
+    <circle cx="250" cy="70" r="1" opacity="0.5"/>
+    <circle cx="300" cy="40" r="1" opacity="0.8"/>
+    <circle cx="350" cy="60" r="1" opacity="0.7"/>
+    <circle cx="450" cy="50" r="1" opacity="0.6"/>
+    <circle cx="500" cy="30" r="1" opacity="0.8"/>
+    <circle cx="550" cy="70" r="1" opacity="0.7"/>
+    <circle cx="600" cy="40" r="1" opacity="0.5"/>
+    <circle cx="650" cy="60" r="1" opacity="0.8"/>
+    <circle cx="700" cy="50" r="1" opacity="0.6"/>
+    <circle cx="750" cy="30" r="1" opacity="0.7"/>
+  </g>
+  
+  <!-- Moon -->
+  <circle cx="700" cy="80" r="30" fill="#F8FAFC" opacity="0.8"/>
+  <circle cx="685" cy="70" r="10" fill="#E2E8F0" opacity="0.6"/>
+  <circle cx="710" cy="90" r="5" fill="#E2E8F0" opacity="0.6"/>
+  
+  <!-- Burj Khalifa (Centerpiece) -->
+  <g>
+    <polygon points="400,50 380,300 420,300" fill="url(#buildingGradient1)"/>
+    <polygon points="400,50 390,150 410,150" fill="url(#glassGradient)"/>
+    <polygon points="390,150 380,300 400,300" fill="url(#glassGradient)" opacity="0.7"/>
+    <polygon points="410,150 420,300 400,300" fill="url(#glassGradient)" opacity="0.7"/>
+    
+    <!-- Decorative elements -->
+    <line x1="400" y1="50" x2="400" y2="300" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="400" cy="50" r="3" fill="#FBBF24" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Main Skyscrapers -->
+  <!-- Left side -->
+  <g>
+    <!-- Tall building 1 -->
+    <rect x="200" y="150" width="40" height="150" fill="url(#buildingGradient2)"/>
+    <rect x="205" y="155" width="30" height="140" fill="url(#windowPattern)"/>
+    
+    <!-- Tall building 2 -->
+    <rect x="250" y="120" width="50" height="180" fill="url(#buildingGradient1)"/>
+    <rect x="255" y="125" width="40" height="170" fill="url(#windowPattern)"/>
+    
+    <!-- Tall building 3 -->
+    <rect x="310" y="100" width="30" height="200" fill="url(#buildingGradient2)"/>
+    <rect x="315" y="105" width="20" height="190" fill="url(#windowPattern)"/>
+    
+    <!-- Twisted tower -->
+    <path d="M150 300 L170 100 L190 300 Z" fill="url(#buildingGradient1)"/>
+    <path d="M155 290 L170 120 L185 290 Z" fill="url(#glassGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Right side -->
+  <g>
+    <!-- Tall building 1 -->
+    <rect x="560" y="150" width="40" height="150" fill="url(#buildingGradient2)"/>
+    <rect x="565" y="155" width="30" height="140" fill="url(#windowPattern)"/>
+    
+    <!-- Tall building 2 -->
+    <rect x="500" y="120" width="50" height="180" fill="url(#buildingGradient1)"/>
+    <rect x="505" y="125" width="40" height="170" fill="url(#windowPattern)"/>
+    
+    <!-- Tall building 3 -->
+    <rect x="460" y="100" width="30" height="200" fill="url(#buildingGradient2)"/>
+    <rect x="465" y="105" width="20" height="190" fill="url(#windowPattern)"/>
+    
+    <!-- Curved tower -->
+    <path d="M610 300 C630 200, 650 200, 650 300" fill="url(#buildingGradient1)"/>
+    <path d="M615 290 C630 210, 645 210, 645 290" fill="url(#glassGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Mid-rise buildings -->
+  <g>
+    <!-- Left cluster -->
+    <rect x="100" y="220" width="40" height="80" fill="url(#buildingGradient2)"/>
+    <rect x="105" y="225" width="30" height="70" fill="url(#windowPattern)"/>
+    
+    <rect x="230" y="230" width="30" height="70" fill="url(#buildingGradient1)"/>
+    <rect x="235" y="235" width="20" height="60" fill="url(#windowPattern)"/>
+    
+    <!-- Right cluster -->
+    <rect x="660" y="220" width="40" height="80" fill="url(#buildingGradient2)"/>
+    <rect x="665" y="225" width="30" height="70" fill="url(#windowPattern)"/>
+    
+    <rect x="540" y="230" width="30" height="70" fill="url(#buildingGradient1)"/>
+    <rect x="545" y="235" width="20" height="60" fill="url(#windowPattern)"/>
+  </g>
+  
+  <!-- Ground level details -->
+  <!-- Roads -->
+  <g stroke="#94A3B8" stroke-width="2">
+    <line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    
+    <line x1="200" y1="300" x2="200" y2="450"/>
+    <line x1="400" y1="300" x2="400" y2="450"/>
+    <line x1="600" y1="300" x2="600" y2="450"/>
+  </g>
+  
+  <!-- Road markings -->
+  <g stroke="white" stroke-width="1" stroke-dasharray="10,10">
+    <line x1="0" y1="335" x2="800" y2="335"/>
+    <line x1="0" y1="365" x2="800" y2="365"/>
+  </g>
+  
+  <!-- Palm trees -->
+  <g>
+    <!-- Tree 1 -->
+    <line x1="150" y1="330" x2="150" y2="310" stroke="#92400E" stroke-width="2"/>
+    <path d="M140 310 C145 300, 155 300, 160 310" fill="#65A30D"/>
+    <path d="M135 315 C145 305, 155 305, 165 315" fill="#65A30D"/>
+    
+    <!-- Tree 2 -->
+    <line x1="250" y1="330" x2="250" y2="310" stroke="#92400E" stroke-width="2"/>
+    <path d="M240 310 C245 300, 255 300, 260 310" fill="#65A30D"/>
+    <path d="M235 315 C245 305, 255 305, 265 315" fill="#65A30D"/>
+    
+    <!-- Tree 3 -->
+    <line x1="550" y1="330" x2="550" y2="310" stroke="#92400E" stroke-width="2"/>
+    <path d="M540 310 C545 300, 555 300, 560 310" fill="#65A30D"/>
+    <path d="M535 315 C545 305, 555 305, 565 315" fill="#65A30D"/>
+    
+    <!-- Tree 4 -->
+    <line x1="650" y1="330" x2="650" y2="310" stroke="#92400E" stroke-width="2"/>
+    <path d="M640 310 C645 300, 655 300, 660 310" fill="#65A30D"/>
+    <path d="M635 315 C645 305, 655 305, 665 315" fill="#65A30D"/>
+  </g>
+  
+  <!-- Building lights -->
+  <g fill="#FBBF24" filter="url(#glow)">
+    <circle cx="170" cy="100" r="2"/>
+    <circle cx="400" cy="50" r="2"/>
+    <circle cx="630" cy="200" r="2"/>
+    <circle cx="560" cy="150" r="2"/>
+    <circle cx="200" cy="150" r="2"/>
+    <circle cx="310" cy="100" r="2"/>
+    <circle cx="460" cy="100" r="2"/>
+  </g>
+  
+  <!-- Water reflection -->
+  <rect x="300" y="300" width="200" height="20" fill="#60A5FA" opacity="0.3"/>
+  <path d="M300 310 Q400 320, 500 310" stroke="white" stroke-width="1" opacity="0.5"/>
+  <path d="M320 315 Q400 325, 480 315" stroke="white" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Title -->
+  <text x="400" y="420" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">Dubai Mega Development</text>
+</svg> 

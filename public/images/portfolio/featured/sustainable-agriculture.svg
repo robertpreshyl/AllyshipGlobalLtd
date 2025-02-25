@@ -1,0 +1,201 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <linearGradient id="fieldGradient" x1="0" y1="200" x2="0" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#84CC16"/>
+      <stop offset="1" stop-color="#4D7C0F"/>
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#78716C"/>
+      <stop offset="1" stop-color="#57534E"/>
+    </linearGradient>
+    <pattern id="cropPattern1" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 L20 10" stroke="#A3E635" stroke-width="1"/>
+      <path d="M10 0 L10 20" stroke="#A3E635" stroke-width="1" opacity="0.7"/>
+    </pattern>
+    <pattern id="cropPattern2" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L20 20" stroke="#A3E635" stroke-width="1"/>
+      <path d="M20 0 L0 20" stroke="#A3E635" stroke-width="1" opacity="0.7"/>
+    </pattern>
+    <pattern id="solarPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" x="1" y="1" fill="#1E40AF" opacity="0.8"/>
+      <line x1="1" y1="1" x2="29" y2="29" stroke="#60A5FA" stroke-width="0.5"/>
+      <line x1="29" y1="1" x2="1" y2="29" stroke="#60A5FA" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#skyGradient)"/>
+  <rect y="200" width="800" height="250" fill="url(#fieldGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="40" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="700" cy="80" r="50" fill="#FBBF24" opacity="0.3"/>
+  <circle cx="700" cy="80" r="60" fill="#FBBF24" opacity="0.1"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#FBBF24" stroke-width="2" opacity="0.7">
+    <line x1="700" y1="10" x2="700" y2="30"/>
+    <line x1="700" y1="130" x2="700" y2="150"/>
+    <line x1="630" y1="80" x2="650" y2="80"/>
+    <line x1="750" y1="80" x2="770" y2="80"/>
+    <line x1="650" y1="30" x2="665" y2="45"/>
+    <line x1="735" y1="115" x2="750" y2="130"/>
+    <line x1="650" y1="130" x2="665" y2="115"/>
+    <line x1="735" y1="45" x2="750" y2="30"/>
+  </g>
+  
+  <!-- Clouds -->
+  <g fill="white" opacity="0.8">
+    <ellipse cx="150" cy="70" rx="50" ry="20"/>
+    <ellipse cx="180" cy="60" rx="40" ry="25"/>
+    <ellipse cx="120" cy="60" rx="30" ry="15"/>
+    
+    <ellipse cx="450" cy="50" rx="60" ry="25"/>
+    <ellipse cx="480" cy="40" rx="40" ry="20"/>
+    <ellipse cx="420" cy="45" rx="35" ry="15"/>
+  </g>
+  
+  <!-- Mountains in background -->
+  <path d="M0 200L100 120L200 180L300 100L400 160L500 90L600 170L700 120L800 200" fill="url(#mountainGradient)" opacity="0.6"/>
+  
+  <!-- Agricultural fields -->
+  <!-- Field 1 - Traditional crops -->
+  <rect x="50" y="250" width="200" height="150" fill="url(#cropPattern1)"/>
+  
+  <!-- Field 2 - Different crop -->
+  <rect x="300" y="250" width="200" height="150" fill="url(#cropPattern2)"/>
+  
+  <!-- Field 3 - Solar farm -->
+  <rect x="550" y="250" width="200" height="150" fill="url(#solarPattern)"/>
+  
+  <!-- Irrigation system -->
+  <g stroke="#0EA5E9" stroke-width="2">
+    <path d="M50 320H250" stroke-dasharray="5,3"/>
+    <path d="M300 320H500" stroke-dasharray="5,3"/>
+    <path d="M150 250V400" stroke-dasharray="5,3"/>
+    <path d="M400 250V400" stroke-dasharray="5,3"/>
+    
+    <!-- Irrigation nodes -->
+    <circle cx="150" cy="320" r="5" fill="#0EA5E9"/>
+    <circle cx="400" cy="320" r="5" fill="#0EA5E9"/>
+  </g>
+  
+  <!-- Farm buildings -->
+  <!-- Main barn -->
+  <g transform="translate(100, 350)" filter="url(#dropShadow)">
+    <rect x="-30" y="-50" width="60" height="50" fill="#B91C1C"/>
+    <polygon points="-30,-50 0,-80 30,-50" fill="#B91C1C"/>
+    <rect x="-20" y="-40" width="15" height="25" fill="#FEF3C7"/>
+    <rect x="5" y="-40" width="15" height="40" fill="#FEF3C7"/>
+  </g>
+  
+  <!-- Greenhouse -->
+  <g transform="translate(350, 350)" filter="url(#dropShadow)">
+    <path d="M-30 0L-30 -40L30 -40L30 0Z" fill="#D1FAE5" opacity="0.7"/>
+    <path d="M-30 -40L0 -70L30 -40Z" fill="#D1FAE5" opacity="0.7"/>
+    <line x1="-20" y1="-40" x2="-20" y2="0" stroke="#047857" stroke-width="1"/>
+    <line x1="-10" y1="-40" x2="-10" y2="0" stroke="#047857" stroke-width="1"/>
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="#047857" stroke-width="1"/>
+    <line x1="10" y1="-40" x2="10" y2="0" stroke="#047857" stroke-width="1"/>
+    <line x1="20" y1="-40" x2="20" y2="0" stroke="#047857" stroke-width="1"/>
+  </g>
+  
+  <!-- Solar control building -->
+  <g transform="translate(650, 350)" filter="url(#dropShadow)">
+    <rect x="-20" y="-30" width="40" height="30" fill="#1E3A8A"/>
+    <rect x="-15" y="-25" width="10" height="10" fill="#BFDBFE"/>
+    <rect x="5" y="-25" width="10" height="10" fill="#BFDBFE"/>
+    <rect x="-5" y="-10" width="10" height="10" fill="#BFDBFE"/>
+  </g>
+  
+  <!-- Wind turbines -->
+  <g transform="translate(200, 230)">
+    <line x1="0" y1="0" x2="0" y2="-100" stroke="#94A3B8" stroke-width="3"/>
+    <circle cx="0" cy="-100" r="5" fill="#94A3B8"/>
+    <g transform="rotate(0)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+    <g transform="rotate(120)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+    <g transform="rotate(240)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <g transform="translate(500, 230)">
+    <line x1="0" y1="0" x2="0" y2="-100" stroke="#94A3B8" stroke-width="3"/>
+    <circle cx="0" cy="-100" r="5" fill="#94A3B8"/>
+    <g transform="rotate(30)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+    <g transform="rotate(150)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+    <g transform="rotate(270)">
+      <line x1="0" y1="-100" x2="-40" y2="-110" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Drone monitoring agriculture -->
+  <g transform="translate(300, 150)">
+    <rect x="-15" y="-5" width="30" height="10" fill="#475569"/>
+    <rect x="-5" y="-15" width="10" height="30" fill="#475569"/>
+    <circle cx="0" cy="0" r="3" fill="#EF4444" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Water reservoir -->
+  <g transform="translate(600, 300)">
+    <ellipse cx="0" cy="0" rx="40" ry="20" fill="#0EA5E9" opacity="0.6"/>
+    <path d="M-30 -5 Q0 5, 30 -5" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M-20 0 Q0 10, 20 0" stroke="white" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Data visualization -->
+  <g transform="translate(250, 150)">
+    <rect x="-100" y="-50" width="200" height="100" rx="10" fill="#0F172A" opacity="0.7"/>
+    
+    <!-- Chart title -->
+    <text x="0" y="-30" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Crop Yield Comparison</text>
+    
+    <!-- Chart bars -->
+    <g>
+      <rect x="-80" y="-10" width="20" height="40" fill="#84CC16"/>
+      <rect x="-50" y="-20" width="20" height="50" fill="#84CC16"/>
+      <rect x="-20" y="-15" width="20" height="45" fill="#84CC16"/>
+      <rect x="10" y="-25" width="20" height="55" fill="#84CC16"/>
+      <rect x="40" y="-30" width="20" height="60" fill="#84CC16"/>
+      <rect x="70" y="-35" width="20" height="65" fill="#84CC16"/>
+    </g>
+    
+    <!-- Chart baseline -->
+    <line x1="-90" y1="30" x2="90" y2="30" stroke="#64748B" stroke-width="1"/>
+    
+    <!-- Legend -->
+    <rect x="-90" y="40" width="10" height="10" fill="#84CC16"/>
+    <text x="-75" y="48" font-family="Arial" font-size="10" text-anchor="start" fill="white">Sustainable Methods</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="420" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">Sustainable Agriculture</text>
+</svg> 

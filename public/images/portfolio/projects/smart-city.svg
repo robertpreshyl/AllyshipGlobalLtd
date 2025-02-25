@@ -1,28 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#F5F5F5"/>
-  <!-- Circuit board pattern -->
-  <g stroke="#1A237E" stroke-width="2" opacity="0.1">
-    <path d="M100 100 H700 M100 200 H700 M100 300 H700 M100 400 H700 M100 500 H700"/>
-    <path d="M200 100 V500 M400 100 V500 M600 100 V500"/>
-  </g>
-  <!-- CPU icon -->
-  <g transform="translate(350, 250)">
-    <rect x="-50" y="-50" width="100" height="100" fill="#1A237E"/>
-    <rect x="-30" y="-30" width="60" height="60" fill="none" stroke="#FFFFFF" stroke-width="2"/>
-    <!-- Pins -->
-    <g stroke="#FFFFFF" stroke-width="2">
-      <line x1="-40" y1="-60" x2="-40" y2="-70"/>
-      <line x1="-20" y1="-60" x2="-20" y2="-70"/>
-      <line x1="0" y1="-60" x2="0" y2="-70"/>
-      <line x1="20" y1="-60" x2="20" y2="-70"/>
-      <line x1="40" y1="-60" x2="40" y2="-70"/>
-      
-      <line x1="-40" y1="60" x2="-40" y2="70"/>
-      <line x1="-20" y1="60" x2="-20" y2="70"/>
-      <line x1="0" y1="60" x2="0" y2="70"/>
-      <line x1="20" y1="60" x2="20" y2="70"/>
-      <line x1="40" y1="60" x2="40" y2="70"/>
-    </g>
-  </g>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0" y1="350" x2="0" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E40AF"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3B82F6" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#skyGradient)"/>
+  
+  <!-- Digital grid overlay -->
+  <rect width="800" height="450" fill="url(#gridPattern)" opacity="0.5"/>
+  
+  <!-- Water/bay -->
+  <rect y="350" width="800" height="100" fill="url(#waterGradient)"/>
+  
+  <!-- Futuristic skyline -->
+  <!-- Marina Bay Sands inspired -->
+  <rect x="100" y="200" width="30" height="150" fill="#64748B"/>
+  <rect x="150" y="200" width="30" height="150" fill="#64748B"/>
+  <rect x="200" y="200" width="30" height="150" fill="#64748B"/>
+  <rect x="100" y="180" width="130" height="20" fill="#94A3B8"/>
+  <ellipse cx="165" cy="170" rx="80" ry="10" fill="#94A3B8"/>
+  
+  <!-- Gardens by the Bay inspired -->
+  <path d="M300 350C300 300 320 280 340 300C360 320 380 280 400 300C420 320 440 280 460 300C480 320 500 300 500 350" stroke="#10B981" stroke-width="3" fill="none"/>
+  <path d="M320 350V300" stroke="#10B981" stroke-width="2"/>
+  <path d="M380 350V280" stroke="#10B981" stroke-width="2"/>
+  <path d="M440 350V280" stroke="#10B981" stroke-width="2"/>
+  <path d="M480 350V300" stroke="#10B981" stroke-width="2"/>
+  
+  <!-- Supertrees -->
+  <circle cx="320" cy="280" r="15" fill="#059669"/>
+  <circle cx="380" cy="260" r="20" fill="#059669"/>
+  <circle cx="440" cy="260" r="20" fill="#059669"/>
+  <circle cx="480" cy="280" r="15" fill="#059669"/>
+  
+  <!-- Modern skyscrapers -->
+  <rect x="550" y="150" width="40" height="200" fill="#475569"/>
+  <rect x="555" y="155" width="30" height="190" fill="#94A3B8" fill-opacity="0.3"/>
+  
+  <rect x="600" y="180" width="50" height="170" fill="#334155"/>
+  <rect x="605" y="185" width="40" height="160" fill="#94A3B8" fill-opacity="0.3"/>
+  
+  <path d="M680 170L700 150L720 170V350H680V170Z" fill="#475569"/>
+  <path d="M685 175L700 160L715 175V345H685V175Z" fill="#94A3B8" fill-opacity="0.3"/>
+  
+  <!-- Futuristic transportation -->
+  <path d="M50 330C100 330 150 330 200 330C250 330 300 330 350 330C400 330 450 330 500 330C550 330 600 330 650 330C700 330 750 330 800 330" stroke="#E0F2FE" stroke-width="1" stroke-dasharray="5 5"/>
+  
+  <!-- MRT/Monorail -->
+  <rect x="100" y="320" width="600" height="2" stroke="#E0F2FE" stroke-width="1"/>
+  <rect x="150" y="322" width="20" height="8" fill="#0EA5E9"/>
+  <rect x="170" y="322" width="20" height="8" fill="#0EA5E9"/>
+  <rect x="190" y="322" width="20" height="8" fill="#0EA5E9"/>
+  
+  <!-- Digital elements -->
+  <!-- Data streams -->
+  <path d="M200 100C300 120 400 80 500 100C600 120 700 80 800 100" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 5"/>
+  <path d="M0 150C100 170 200 130 300 150C400 170 500 130 600 150" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5 5"/>
+  
+  <!-- Connected nodes -->
+  <circle cx="200" cy="100" r="3" fill="#60A5FA" filter="url(#glow)"/>
+  <circle cx="300" cy="150" r="3" fill="#60A5FA" filter="url(#glow)"/>
+  <circle cx="400" cy="80" r="3" fill="#60A5FA" filter="url(#glow)"/>
+  <circle cx="500" cy="100" r="3" fill="#60A5FA" filter="url(#glow)"/>
+  <circle cx="600" cy="150" r="3" fill="#60A5FA" filter="url(#glow)"/>
+  
+  <!-- Smart city elements -->
+  <!-- Traffic monitoring -->
+  <circle cx="250" cy="330" r="5" fill="#F43F5E" filter="url(#glow)"/>
+  <circle cx="450" cy="330" r="5" fill="#F43F5E" filter="url(#glow)"/>
+  <circle cx="650" cy="330" r="5" fill="#F43F5E" filter="url(#glow)"/>
+  
+  <!-- Environmental sensors -->
+  <circle cx="320" cy="250" r="3" fill="#10B981" filter="url(#glow)"/>
+  <circle cx="380" cy="230" r="3" fill="#10B981" filter="url(#glow)"/>
+  <circle cx="440" cy="230" r="3" fill="#10B981" filter="url(#glow)"/>
+  <circle cx="480" cy="250" r="3" fill="#10B981" filter="url(#glow)"/>
+  
+  <!-- Building lights -->
+  <rect x="560" y="170" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="575" y="190" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="560" y="210" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="575" y="230" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="560" y="250" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="575" y="270" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="560" y="290" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  
+  <rect x="610" y="200" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="625" y="220" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="610" y="240" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="625" y="260" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="610" y="280" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="625" y="300" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  
+  <rect x="690" y="190" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="705" y="210" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="690" y="230" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="705" y="250" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="690" y="270" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  <rect x="705" y="290" width="5" height="5" fill="#FBBF24" filter="url(#glow)"/>
+  
+  <!-- Water reflections -->
+  <rect x="115" y="350" width="2" height="30" fill="#94A3B8" opacity="0.5"/>
+  <rect x="165" y="350" width="2" height="40" fill="#94A3B8" opacity="0.5"/>
+  <rect x="215" y="350" width="2" height="30" fill="#94A3B8" opacity="0.5"/>
+  
+  <rect x="570" y="350" width="2" height="50" fill="#94A3B8" opacity="0.5"/>
+  <rect x="625" y="350" width="2" height="60" fill="#94A3B8" opacity="0.5"/>
+  <rect x="700" y="350" width="2" height="50" fill="#94A3B8" opacity="0.5"/>
+  
+  <!-- Stars in the sky -->
+  <circle cx="50" cy="50" r="1" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="30" r="1" fill="white" opacity="0.8"/>
+  <circle cx="200" cy="60" r="1" fill="white" opacity="0.8"/>
+  <circle cx="280" cy="40" r="1" fill="white" opacity="0.8"/>
+  <circle cx="350" cy="70" r="1" fill="white" opacity="0.8"/>
+  <circle cx="420" cy="30" r="1" fill="white" opacity="0.8"/>
+  <circle cx="500" cy="50" r="1" fill="white" opacity="0.8"/>
+  <circle cx="580" cy="20" r="1" fill="white" opacity="0.8"/>
+  <circle cx="650" cy="60" r="1" fill="white" opacity="0.8"/>
+  <circle cx="720" cy="40" r="1" fill="white" opacity="0.8"/>
+  <circle cx="780" cy="70" r="1" fill="white" opacity="0.8"/>
 </svg> 

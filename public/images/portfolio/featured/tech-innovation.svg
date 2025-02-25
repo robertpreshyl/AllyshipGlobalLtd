@@ -1,0 +1,220 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="floorGradient" x1="0" y1="350" x2="0" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0.6"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="none"/>
+      <line x1="0" y1="0" x2="50" y2="0" stroke="#64748B" stroke-width="0.5" opacity="0.3"/>
+      <line x1="0" y1="0" x2="0" y2="50" stroke="#64748B" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="5" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGradient)"/>
+  <rect y="350" width="800" height="100" fill="url(#floorGradient)"/>
+  
+  <!-- Grid floor -->
+  <rect y="350" width="800" height="100" fill="url(#gridPattern)"/>
+  
+  <!-- Digital particles -->
+  <g fill="#60A5FA" filter="url(#glow)">
+    <circle cx="100" cy="50" r="1" opacity="0.8"/>
+    <circle cx="150" cy="80" r="1" opacity="0.6"/>
+    <circle cx="200" cy="30" r="1" opacity="0.7"/>
+    <circle cx="250" cy="70" r="1" opacity="0.5"/>
+    <circle cx="300" cy="40" r="1" opacity="0.8"/>
+    <circle cx="350" cy="60" r="1" opacity="0.7"/>
+    <circle cx="450" cy="50" r="1" opacity="0.6"/>
+    <circle cx="500" cy="30" r="1" opacity="0.8"/>
+    <circle cx="550" cy="70" r="1" opacity="0.7"/>
+    <circle cx="600" cy="40" r="1" opacity="0.5"/>
+    <circle cx="650" cy="60" r="1" opacity="0.8"/>
+    <circle cx="700" cy="50" r="1" opacity="0.6"/>
+    <circle cx="750" cy="30" r="1" opacity="0.7"/>
+  </g>
+  
+  <!-- Main hub structure -->
+  <g filter="url(#softShadow)">
+    <!-- Central dome -->
+    <ellipse cx="400" cy="250" rx="150" ry="100" fill="#0F172A"/>
+    <ellipse cx="400" cy="250" rx="140" ry="90" fill="url(#glassGradient)" opacity="0.7"/>
+    
+    <!-- Base structure -->
+    <rect x="250" y="300" width="300" height="50" fill="#1E293B"/>
+    <rect x="260" y="310" width="280" height="30" fill="#334155"/>
+    
+    <!-- Entrance -->
+    <rect x="370" y="320" width="60" height="30" fill="#0F172A"/>
+    <rect x="380" y="330" width="40" height="20" fill="url(#glassGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- Digital network connections -->
+  <g stroke="#60A5FA" stroke-width="1" stroke-dasharray="5,5" opacity="0.6" filter="url(#glow)">
+    <line x1="400" y1="150" x2="400" y2="50"/>
+    <line x1="400" y1="150" x2="300" y2="100"/>
+    <line x1="400" y1="150" x2="500" y2="100"/>
+    <line x1="400" y1="150" x2="200" y2="150"/>
+    <line x1="400" y1="150" x2="600" y2="150"/>
+    <line x1="400" y1="150" x2="300" y2="200"/>
+    <line x1="400" y1="150" x2="500" y2="200"/>
+  </g>
+  
+  <!-- Connection nodes -->
+  <g fill="#3B82F6" filter="url(#glow)">
+    <circle cx="400" cy="150" r="10"/>
+    <circle cx="400" cy="50" r="5"/>
+    <circle cx="300" cy="100" r="5"/>
+    <circle cx="500" cy="100" r="5"/>
+    <circle cx="200" cy="150" r="5"/>
+    <circle cx="600" cy="150" r="5"/>
+    <circle cx="300" cy="200" r="5"/>
+    <circle cx="500" cy="200" r="5"/>
+  </g>
+  
+  <!-- Holographic displays -->
+  <g transform="translate(300, 150)">
+    <rect x="-40" y="-60" width="80" height="120" fill="#3B82F6" opacity="0.1"/>
+    <rect x="-35" y="-55" width="70" height="110" fill="#3B82F6" opacity="0.2"/>
+    
+    <!-- Data visualization -->
+    <g stroke="#60A5FA" stroke-width="1" opacity="0.8">
+      <polyline points="-30,-30 -20,-10 -10,-40 0,-20 10,-30 20,-15 30,-25" fill="none"/>
+      <circle cx="-20" cy="-10" r="3" fill="#60A5FA"/>
+      <circle cx="0" cy="-20" r="3" fill="#60A5FA"/>
+      <circle cx="20" cy="-15" r="3" fill="#60A5FA"/>
+    </g>
+    
+    <g stroke="#10B981" stroke-width="1" opacity="0.8">
+      <polyline points="-30,10 -20,30 -10,0 0,20 10,10 20,25 30,15" fill="none"/>
+      <circle cx="-20" cy="30" r="3" fill="#10B981"/>
+      <circle cx="0" cy="20" r="3" fill="#10B981"/>
+      <circle cx="20" cy="25" r="3" fill="#10B981"/>
+    </g>
+  </g>
+  
+  <g transform="translate(500, 150)">
+    <rect x="-40" y="-60" width="80" height="120" fill="#3B82F6" opacity="0.1"/>
+    <rect x="-35" y="-55" width="70" height="110" fill="#3B82F6" opacity="0.2"/>
+    
+    <!-- Code visualization -->
+    <g fill="#60A5FA" opacity="0.8">
+      <rect x="-30" y="-40" width="60" height="5" opacity="0.6"/>
+      <rect x="-30" y="-30" width="40" height="5" opacity="0.6"/>
+      <rect x="-30" y="-20" width="50" height="5" opacity="0.6"/>
+      <rect x="-30" y="-10" width="30" height="5" opacity="0.6"/>
+      <rect x="-30" y="0" width="55" height="5" opacity="0.6"/>
+      <rect x="-30" y="10" width="45" height="5" opacity="0.6"/>
+      <rect x="-30" y="20" width="60" height="5" opacity="0.6"/>
+      <rect x="-30" y="30" width="35" height="5" opacity="0.6"/>
+      <rect x="-30" y="40" width="50" height="5" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- Floating tech elements -->
+  <!-- DNA structure -->
+  <g transform="translate(200, 100)">
+    <path d="M-20 -40 C-10 -30, 10 -30, 20 -40 C10 -50, -10 -50, -20 -40" stroke="#60A5FA" stroke-width="1" fill="none"/>
+    <path d="M-20 -20 C-10 -10, 10 -10, 20 -20 C10 -30, -10 -30, -20 -20" stroke="#60A5FA" stroke-width="1" fill="none"/>
+    <path d="M-20 0 C-10 10, 10 10, 20 0 C10 -10, -10 -10, -20 0" stroke="#60A5FA" stroke-width="1" fill="none"/>
+    <path d="M-20 20 C-10 30, 10 30, 20 20 C10 10, -10 10, -20 20" stroke="#60A5FA" stroke-width="1" fill="none"/>
+    <path d="M-20 40 C-10 50, 10 50, 20 40 C10 30, -10 30, -20 40" stroke="#60A5FA" stroke-width="1" fill="none"/>
+    
+    <line x1="-20" y1="-40" x2="-20" y2="40" stroke="#60A5FA" stroke-width="1"/>
+    <line x1="20" y1="-40" x2="20" y2="40" stroke="#60A5FA" stroke-width="1"/>
+    
+    <circle cx="-20" cy="-40" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="-40" r="3" fill="#3B82F6"/>
+    <circle cx="-20" cy="-20" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="-20" r="3" fill="#3B82F6"/>
+    <circle cx="-20" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="-20" cy="20" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="20" r="3" fill="#3B82F6"/>
+    <circle cx="-20" cy="40" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="40" r="3" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Atom structure -->
+  <g transform="translate(600, 100)">
+    <circle cx="0" cy="0" r="5" fill="#3B82F6"/>
+    
+    <ellipse cx="0" cy="0" rx="30" ry="10" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="10" ry="30" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="25" ry="25" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0.6"/>
+    
+    <circle cx="30" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="-30" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="0" cy="30" r="3" fill="#3B82F6"/>
+    <circle cx="0" cy="-30" r="3" fill="#3B82F6"/>
+    <circle cx="18" cy="18" r="3" fill="#3B82F6"/>
+    <circle cx="-18" cy="-18" r="3" fill="#3B82F6"/>
+    <circle cx="18" cy="-18" r="3" fill="#3B82F6"/>
+    <circle cx="-18" cy="18" r="3" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Brain neural network -->
+  <g transform="translate(400, 80)">
+    <path d="M0 0 C10 -20, 30 -30, 40 -10 C50 10, 30 30, 10 20 C-10 10, -30 20, -40 0 C-50 -20, -30 -40, -10 -30 C10 -20, 30 -10, 20 10 C10 30, -10 40, -30 30 C-50 20, -40 0, -20 -10 C0 -20, 20 -30, 40 -20" 
+          stroke="#60A5FA" stroke-width="1" fill="none" opacity="0.6"/>
+    
+    <circle cx="0" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="40" cy="-10" r="3" fill="#3B82F6"/>
+    <circle cx="10" cy="20" r="3" fill="#3B82F6"/>
+    <circle cx="-40" cy="0" r="3" fill="#3B82F6"/>
+    <circle cx="-10" cy="-30" r="3" fill="#3B82F6"/>
+    <circle cx="20" cy="10" r="3" fill="#3B82F6"/>
+    <circle cx="-30" cy="30" r="3" fill="#3B82F6"/>
+    <circle cx="-20" cy="-10" r="3" fill="#3B82F6"/>
+    <circle cx="40" cy="-20" r="3" fill="#3B82F6"/>
+  </g>
+  
+  <!-- Robots/drones -->
+  <g transform="translate(250, 300)">
+    <rect x="-15" y="-15" width="30" height="30" rx="5" fill="#334155"/>
+    <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#475569"/>
+    <circle cx="0" cy="0" r="5" fill="#3B82F6" filter="url(#glow)"/>
+    <line x1="-15" y1="-15" x2="-25" y2="-25" stroke="#475569" stroke-width="2"/>
+    <line x1="15" y1="-15" x2="25" y2="-25" stroke="#475569" stroke-width="2"/>
+    <line x1="-15" y1="15" x2="-25" y2="25" stroke="#475569" stroke-width="2"/>
+    <line x1="15" y1="15" x2="25" y2="25" stroke="#475569" stroke-width="2"/>
+  </g>
+  
+  <g transform="translate(550, 300)">
+    <rect x="-15" y="-15" width="30" height="30" rx="5" fill="#334155"/>
+    <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#475569"/>
+    <circle cx="0" cy="0" r="5" fill="#3B82F6" filter="url(#glow)"/>
+    <line x1="-15" y1="-15" x2="-25" y2="-25" stroke="#475569" stroke-width="2"/>
+    <line x1="15" y1="-15" x2="25" y2="-25" stroke="#475569" stroke-width="2"/>
+    <line x1="-15" y1="15" x2="-25" y2="25" stroke="#475569" stroke-width="2"/>
+    <line x1="15" y1="15" x2="25" y2="25" stroke="#475569" stroke-width="2"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="420" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="white">Tech Innovation Hub</text>
+</svg> 

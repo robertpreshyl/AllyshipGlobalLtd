@@ -36,6 +36,11 @@ import {
   DollarSign,
   Globe,
   Star,
+  FileText,
+  Route,
+  Droplet,
+  TrendingUp,
+  Activity,
 } from 'lucide-react'
 
 interface IconsType {
@@ -77,4 +82,9 @@ export const Icons: IconsType = {
   dollarSign: DollarSign,
   globe: Globe,
   star: Star,
+  fileText: FileText,
+  route: Route,
+  droplet: Droplet,
+  trendingUp: TrendingUp,
+  activity: Activity,
 } 

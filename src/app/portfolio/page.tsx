@@ -3,6 +3,7 @@ import { type Metadata } from 'next'
 import { SectorGrid } from '@/components/sections/portfolio/SectorGrid'
 import { ProjectShowcase } from '@/components/sections/portfolio/ProjectShowcase'
 import { CaseStudies } from '@/components/sections/portfolio/CaseStudies'
+import { InvestmentDashboard } from '@/components/sections/portfolio/InvestmentDashboard'
 
 export const metadata: Metadata = {
   title: 'Investment Portfolio',
@@ -27,8 +28,16 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Sector Grid with Filters */}
+      {/* Investment Dashboard */}
       <section className="py-16 md:py-24">
+        <div className="container">
+          <h2 className="mb-12 text-center font-heading text-3xl font-bold">Portfolio Performance</h2>
+          <InvestmentDashboard />
+        </div>
+      </section>
+
+      {/* Sector Grid with Filters */}
+      <section className="border-t py-16 md:py-24">
         <div className="container">
           <h2 className="mb-12 text-center font-heading text-3xl font-bold">Investment Sectors</h2>
           <SectorGrid />
@@ -44,7 +53,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-16 md:py-24">
+      <section className="border-t py-16 md:py-24">
         <div className="container">
           <h2 className="mb-12 text-center font-heading text-3xl font-bold">Success Stories</h2>
           <CaseStudies />

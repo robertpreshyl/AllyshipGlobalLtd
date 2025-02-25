@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#F5F5F5"/>
-  <!-- Modern building silhouette -->
-  <path d="M200 550 L200 200 L400 100 L600 200 L600 550 Z" stroke="#1A237E" stroke-width="4" fill="#E3F2FD"/>
-  <path d="M300 550 L300 300 L400 250 L500 300 L500 550" stroke="#1A237E" stroke-width="2" fill="none"/>
-  <!-- Windows -->
-  <rect x="250" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
-  <rect x="350" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
-  <rect x="450" y="350" width="50" height="50" fill="#1A237E" opacity="0.1"/>
-  <rect x="250" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
-  <rect x="350" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
-  <rect x="450" y="450" width="50" height="50" fill="#1A237E" opacity="0.1"/>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="800" height="450" fill="url(#skyGradient)"/>
+  
+  <!-- Desert/ground -->
+  <rect y="350" width="800" height="100" fill="#E6C78F"/>
+  
+  <!-- Burj Khalifa -->
+  <path d="M400 50L420 350H380L400 50Z" fill="#A3C1D6"/>
+  <path d="M400 50L410 350H390L400 50Z" fill="#D6E9F5"/>
+  <rect x="385" y="350" width="30" height="20" fill="#A3C1D6"/>
+  
+  <!-- Modern skyscrapers -->
+  <!-- Building 1 -->
+  <rect x="100" y="200" width="60" height="150" fill="#8BADC1"/>
+  <rect x="105" y="205" width="50" height="140" fill="#D6E9F5" fill-opacity="0.6"/>
+  
+  <!-- Building 2 -->
+  <rect x="170" y="180" width="70" height="170" fill="#A3C1D6"/>
+  <rect x="175" y="185" width="60" height="160" fill="#D6E9F5" fill-opacity="0.7"/>
+  
+  <!-- Building 3 - curved top -->
+  <path d="M260 170C260 170 280 150 300 170V350H260V170Z" fill="#8BADC1"/>
+  <path d="M265 175C265 175 280 160 295 175V345H265V175Z" fill="#D6E9F5" fill-opacity="0.6"/>
+  
+  <!-- Building 4 - Dubai Frame inspired -->
+  <rect x="320" y="200" width="50" height="150" fill="#D4AF37"/>
+  <rect x="325" y="205" width="40" height="140" fill="#F5E7C1"/>
+  
+  <!-- Building 5 -->
+  <rect x="450" y="150" width="80" height="200" fill="#A3C1D6"/>
+  <rect x="455" y="155" width="70" height="190" fill="#D6E9F5" fill-opacity="0.7"/>
+  
+  <!-- Building 6 - twisted tower -->
+  <path d="M550 150C550 150 570 170 590 150C590 170 610 190 590 210C590 230 570 250 590 270C590 290 570 310 550 330V150Z" fill="#8BADC1"/>
+  <path d="M555 155C555 155 570 175 585 155C585 175 600 195 585 215C585 235 570 255 585 275C585 295 570 315 555 335V155Z" fill="#D6E9F5" fill-opacity="0.6"/>
+  
+  <!-- Building 7 -->
+  <rect x="610" y="220" width="90" height="130" fill="#A3C1D6"/>
+  <rect x="615" y="225" width="80" height="120" fill="#D6E9F5" fill-opacity="0.7"/>
+  
+  <!-- Palm trees -->
+  <path d="M50 350C50 350 40 330 50 320C60 310 70 330 70 350H50Z" fill="#2D7D46"/>
+  <rect x="55" y="350" width="10" height="20" fill="#8B4513"/>
+  
+  <path d="M700 350C700 350 690 330 700 320C710 310 720 330 720 350H700Z" fill="#2D7D46"/>
+  <rect x="705" y="350" width="10" height="20" fill="#8B4513"/>
+  
+  <!-- Roads -->
+  <rect y="370" width="800" height="10" fill="#555555"/>
+  <rect x="200" y="370" width="10" height="80" fill="#555555"/>
+  <rect x="600" y="370" width="10" height="80" fill="#555555"/>
+  
+  <!-- Road markings -->
+  <rect x="50" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="120" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="190" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="260" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="330" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="400" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="470" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="540" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="610" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="680" y="374" width="30" height="2" fill="#FFFFFF"/>
+  <rect x="750" y="374" width="30" height="2" fill="#FFFFFF"/>
+  
+  <!-- Water reflection -->
+  <rect x="0" y="380" width="800" height="70" fill="#3B82F6" fill-opacity="0.3"/>
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E40AF"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
 </svg> 
