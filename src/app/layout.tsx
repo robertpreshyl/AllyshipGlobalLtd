@@ -7,6 +7,8 @@ import { Header } from '@/components/layout/Header/Header'
 import { Footer } from '@/components/layout/Footer/Footer'
 import { CookieConsentBanner } from '@/components/common/CookieConsentBanner'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
+import { InvestmentActivityNotification } from '@/components/common/InvestmentActivityNotification'
+import { MarketTicker } from '@/components/common/MarketTicker'
 import './globals.css'
 import { LanguageProvider } from '@/lib/i18n/LanguageContext'
 
@@ -59,11 +61,13 @@ export default function RootLayout({
         <LanguageProvider>
           <div className="relative flex min-h-screen flex-col">
             <Header />
+            <MarketTicker />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
           <CookieConsentBanner />
           <FloatingCTA />
+          <InvestmentActivityNotification />
           <Analytics />
         </LanguageProvider>
       </body>
