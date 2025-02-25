@@ -1,0 +1,10 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- SoftBank Vision Fund logo -->
+    <rect x="0" y="0" width="30" height="30" rx="2" fill="#A80038"/>
+    <text x="5" y="20" font-family="Arial" font-weight="bold" font-size="12" fill="#FFFFFF">SB</text>
+    <text x="40" y="15" font-family="Arial" font-weight="bold" font-size="10" fill="#A80038">SOFTBANK</text>
+    <text x="40" y="25" font-family="Arial" font-weight="bold" font-size="10" fill="#A80038">VISION FUND</text>
+  </g>
+</svg> 

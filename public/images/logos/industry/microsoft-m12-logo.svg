@@ -1,0 +1,12 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Microsoft M12 Ventures logo -->
+    <rect x="0" y="0" width="14" height="14" fill="#F25022"/>
+    <rect x="16" y="0" width="14" height="14" fill="#7FBA00"/>
+    <rect x="0" y="16" width="14" height="14" fill="#00A4EF"/>
+    <rect x="16" y="16" width="14" height="14" fill="#FFB900"/>
+    <text x="40" y="15" font-family="Arial" font-weight="bold" font-size="12" fill="#737373">MICROSOFT</text>
+    <text x="40" y="25" font-family="Arial" font-weight="bold" font-size="10" fill="#737373">M12 VENTURES</text>
+  </g>
+</svg> 

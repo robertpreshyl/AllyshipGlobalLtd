@@ -1,4 +1,16 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="60" fill="#FFFFFF"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="#000000">THE ECONOMIST</text>
+  <g transform="translate(20, 20)">
+    <!-- Red background for the logo -->
+    <rect x="0" y="-10" width="160" height="40" rx="2" fill="#E3120B"/>
+    <!-- THE ECONOMIST text in white -->
+    <path d="M10 0H25V5H18V20H15V5H10V0Z" fill="#FFFFFF"/>
+    <path d="M30 0H45V5H33V8H43V13H33V15H45V20H30V0Z" fill="#FFFFFF"/>
+    <path d="M50 0H65V5H53V8H63V13H53V15H65V20H50V0Z" fill="#FFFFFF"/>
+    
+    <path d="M70 0H85C88.866 0 92 3.13401 92 7V13C92 16.866 88.866 20 85 20H70V0ZM75 5V15H84C84.5523 15 85 14.5523 85 14V6C85 5.44772 84.5523 5 84 5H75Z" fill="#FFFFFF"/>
+    <path d="M95 0H110C113.866 0 117 3.13401 117 7V13C117 16.866 113.866 20 110 20H95V0ZM100 5V15H109C109.552 15 110 14.5523 110 14V6C110 5.44772 109.552 5 109 5H100Z" fill="#FFFFFF"/>
+    <path d="M120 0H135V5H123V8H133V13H123V15H135V20H120V0Z" fill="#FFFFFF"/>
+    <path d="M140 0H145V15H155V20H140V0Z" fill="#FFFFFF"/>
+  </g>
 </svg> 

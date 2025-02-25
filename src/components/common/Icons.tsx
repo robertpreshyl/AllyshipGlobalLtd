@@ -41,6 +41,8 @@ import {
   Droplet,
   TrendingUp,
   Activity,
+  UserCircle2,
+  CircleUserRound,
 } from 'lucide-react'
 
 interface IconsType {
@@ -66,6 +68,8 @@ export const Icons: IconsType = {
   clock: Clock,
   shield: Shield,
   user: User,
+  male: UserCircle2,
+  female: CircleUserRound,
   layout: Layout,
   target: Target,
   newspaper: Newspaper,

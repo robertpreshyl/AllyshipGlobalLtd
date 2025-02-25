@@ -1,4 +1,7 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="60" fill="#FFFFFF"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="18" fill="#000000">BLOOMBERG</text>
+  <g transform="translate(20, 15)">
+    <path d="M0 0H13.5V30H0V0ZM20.25 0H33.75V30H20.25V0ZM40.5 0H54V30H40.5V0ZM60.75 0H74.25V30H60.75V0ZM81 0H94.5V30H81V0ZM101.25 0H114.75V30H101.25V0ZM121.5 0H135V30H121.5V0ZM141.75 0H155.25V30H141.75V0Z" fill="#2D2D2D"/>
+    <path d="M6.75 6.75H6.75V23.25H6.75V6.75ZM27 6.75H27V23.25H27V6.75ZM47.25 6.75H47.25V23.25H47.25V6.75ZM67.5 6.75H67.5V23.25H67.5V6.75ZM87.75 6.75H87.75V23.25H87.75V6.75ZM108 6.75H108V23.25H108V6.75ZM128.25 6.75H128.25V23.25H128.25V6.75ZM148.5 6.75H148.5V23.25H148.5V6.75Z" fill="#FFFFFF"/>
+  </g>
 </svg> 

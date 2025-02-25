@@ -1,4 +1,12 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="60" fill="#FFF1E5"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#000000">FT</text>
+  <g transform="translate(60, 15)">
+    <path d="M0 0H20V5H0V0Z" fill="#0A5E66"/>
+    <path d="M0 10H20V15H0V10Z" fill="#0A5E66"/>
+    <path d="M0 0V30H5V0H0Z" fill="#0A5E66"/>
+    <path d="M30 0H50V5H30V0Z" fill="#0A5E66"/>
+    <path d="M30 10H50V15H30V10Z" fill="#0A5E66"/>
+    <path d="M30 20H50V25H30V20Z" fill="#0A5E66"/>
+    <path d="M65 0H80V30H65V0Z" fill="#0A5E66"/>
+  </g>
 </svg> 

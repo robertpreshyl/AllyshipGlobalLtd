@@ -1,4 +1,14 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="60" fill="#FFFFFF"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#000000">REUTERS</text>
+  <g transform="translate(20, 20)">
+    <!-- Orange dot -->
+    <circle cx="10" cy="10" r="10" fill="#FF8000"/>
+    <!-- REUTERS text -->
+    <path d="M30 0H45C48.866 0 52 3.13401 52 7V7C52 10.866 48.866 14 45 14H38V20H30V0ZM38 7H44C44.5523 7 45 6.55228 45 6V6C45 5.44772 44.5523 5 44 5H38V7Z" fill="#000000"/>
+    <path d="M55 0H63V8H70V0H78V20H70V13H63V20H55V0Z" fill="#000000"/>
+    <path d="M82 0H90V20H82V0Z" fill="#000000"/>
+    <path d="M95 0H103V15H115V20H95V0Z" fill="#000000"/>
+    <path d="M120 0H135C138.866 0 142 3.13401 142 7V13C142 16.866 138.866 20 135 20H120V0ZM128 5V15H134C134.552 15 135 14.5523 135 14V6C135 5.44772 134.552 5 134 5H128Z" fill="#000000"/>
+    <path d="M145 0H160V5H153V8H159V13H153V15H160V20H145V0Z" fill="#000000"/>
+  </g>
 </svg> 

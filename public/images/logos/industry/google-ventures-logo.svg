@@ -1,0 +1,10 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Google Ventures logo -->
+    <path d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z" fill="#4285F4"/>
+    <path d="M15 7L23 15L15 23L7 15L15 7Z" fill="#FFFFFF"/>
+    <text x="40" y="15" font-family="Arial" font-weight="bold" font-size="12" fill="#4285F4">GOOGLE</text>
+    <text x="40" y="25" font-family="Arial" font-weight="bold" font-size="10" fill="#4285F4">VENTURES</text>
+  </g>
+</svg> 

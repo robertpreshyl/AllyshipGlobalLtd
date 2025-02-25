@@ -1,0 +1,10 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Alibaba Group logo -->
+    <path d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15Z" fill="#FF6A00"/>
+    <path d="M7 15C7 10.5817 10.5817 7 15 7C19.4183 7 23 10.5817 23 15C23 19.4183 19.4183 23 15 23C10.5817 23 7 19.4183 7 15Z" fill="#FFFFFF"/>
+    <text x="40" y="15" font-family="Arial" font-weight="bold" font-size="12" fill="#FF6A00">ALIBABA</text>
+    <text x="40" y="25" font-family="Arial" font-weight="bold" font-size="10" fill="#FF6A00">GROUP</text>
+  </g>
+</svg> 

@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Intel Capital logo -->
+    <path d="M0 0H30V30H0V0Z" fill="#0071C5"/>
+    <path d="M5 5H25V25H5V5Z" fill="#FFFFFF"/>
+    <path d="M10 10H20V20H10V10Z" fill="#0071C5"/>
+    <text x="40" y="15" font-family="Arial" font-weight="bold" font-size="12" fill="#0071C5">INTEL</text>
+    <text x="40" y="25" font-family="Arial" font-weight="bold" font-size="10" fill="#0071C5">CAPITAL</text>
+  </g>
+</svg> 

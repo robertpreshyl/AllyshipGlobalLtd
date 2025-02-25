@@ -1,4 +1,11 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="60" fill="#FFFFFF"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#000000">WSJ</text>
+  <g transform="translate(40, 15)">
+    <!-- W -->
+    <path d="M0 0L5 30H15L20 10L25 30H35L40 0H30L28 20L23 0H17L12 20L10 0H0Z" fill="#000000"/>
+    <!-- S -->
+    <path d="M45 0H70V8H55V11H65V19H55V22H70V30H45V22L55 19V11L45 8V0Z" fill="#000000"/>
+    <!-- J -->
+    <path d="M75 0H100V22H90V8H85V22C85 26.4183 81.4183 30 77 30H75V0Z" fill="#000000"/>
+  </g>
 </svg> 

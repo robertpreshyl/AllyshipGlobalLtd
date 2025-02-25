@@ -1,0 +1,8 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Simon Property Group logo -->
+    <path d="M0 0L15 30L30 0H0Z" fill="#0033A0"/>
+    <text x="40" y="20" font-family="Arial" font-weight="bold" font-size="16" fill="#0033A0">SIMON</text>
+  </g>
+</svg> 

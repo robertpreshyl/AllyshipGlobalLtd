@@ -1,0 +1,10 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- CBRE logo -->
+    <rect x="0" y="0" width="30" height="30" rx="15" fill="#004B87"/>
+    <path d="M7 15C7 10.5817 10.5817 7 15 7C19.4183 7 23 10.5817 23 15C23 19.4183 19.4183 23 15 23C10.5817 23 7 19.4183 7 15Z" fill="#FFFFFF"/>
+    <path d="M11 15C11 12.7909 12.7909 11 15 11C17.2091 11 19 12.7909 19 15C19 17.2091 17.2091 19 15 19C12.7909 19 11 17.2091 11 15Z" fill="#004B87"/>
+    <text x="40" y="20" font-family="Arial" font-weight="bold" font-size="16" fill="#004B87">CBRE</text>
+  </g>
+</svg> 

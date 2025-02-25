@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#FFFFFF"/>
+  <g transform="translate(20, 15)">
+    <!-- Blackstone logo -->
+    <path d="M0 0H20V30H0V0Z" fill="#000000"/>
+    <path d="M25 0H160V5H25V0Z" fill="#000000"/>
+    <path d="M25 12.5H160V17.5H25V12.5Z" fill="#000000"/>
+    <path d="M25 25H160V30H25V25Z" fill="#000000"/>
+    <text x="25" y="22" font-family="Arial" font-weight="bold" font-size="14" fill="#000000">BLACKSTONE</text>
+  </g>
+</svg> 
