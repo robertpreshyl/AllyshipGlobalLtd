@@ -23,7 +23,7 @@ A modern, responsive corporate website for Allyship Global Ltd, showcasing globa
 
 ### Prerequisites
 
-- Node.js 20.x or later
+- Node.js 20.x or later.
 - npm 10.x or later
 
 ### Installation
